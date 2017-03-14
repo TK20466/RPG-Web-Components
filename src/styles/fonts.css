@@ -1,0 +1,15 @@
+@font-face { font-family: ITCSymbolStd; src: url('/fonts/itc-symbol-std-book.otf'); } 
+@font-face { font-family: ITCSymbolStd; font-weight: bold; src: url('/fonts/itc-symbol-std-bold.otf'); } 
+@font-face { font-family: ITCSymbolStd; font-weight: 500; src: url('/fonts/itc-symbol-std-medium.otf'); } 
+@font-face { font-family: ITCSymbolStd; font-style: italic; src: url('/fonts/itc-symbol-std-book-italic.otf'); } 
+@font-face { font-family: ITCSymbolStd; font-weight: bold; font-style: italic; src: url('/fonts/itc-symbol-lt-bold-italic.ttf'); } 
+@font-face { font-family: TeutonFett; src: url('/fonts/TeutonFett.otf'); } 
+@font-face { font-family: TeutonFett; font-weight: bold; src: url('/fonts/TeutonFett-Bold.otf'); } 
+@font-face { font-family: TeutonFett; font-style: italic; src: url('/fonts/TeutonFett-italic.otf'); } 
+@font-face { font-family: TeutonFett; font-weight: bold; font-style: italic; src: url('/fonts/TeutonFett-BoldItalic.otf'); } 
+@font-face { font-family: TeutonMager; src: url('/fonts/TeutonMager.otf'); } 
+@font-face { font-family: TeutonMager; font-weight: bold; src: url('/fonts/TeutonMager-Bold.otf'); } 
+@font-face { font-family: TeutonMager; font-style: italic; src: url('/fonts/TeutonMager-italic.otf'); } 
+@font-face { font-family: TeutonMager; font-weight: bold; font-style: italic; src: url('/fonts/TeutonMager-BoldItalic.otf'); } 
+@font-face { font-family: ElektraMediumPro; font-weight: bold; src: url('/fonts/ElektraMediumPro-Bold.otf'); } 
+@font-face { font-family: EotESymbol; src: url('/fonts/EotESymbol-Regular-PLUS.otf'); } 

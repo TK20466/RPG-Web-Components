@@ -1,0 +1,27 @@
+@media print {
+    body, html {
+        background: none;
+    }
+    .die-symbol.boost:after {
+        color: rgb(114, 204, 219);
+       -webkit-text-stroke-color: rgb(114, 204, 219);
+    }
+    .die-symbol.ability:after {
+        color: rgb(63, 172, 73);   
+        -webkit-text-stroke-color: rgb(63, 172, 73);
+
+    }
+    .die-symbol.difficulty:after {
+        color: rgb(82, 36, 128);   
+        -webkit-text-stroke-color: rgb(82, 36, 128);  
+    }
+    .die-symbol.challenge:after {
+        color: rgb(209, 35, 42);
+        -webkit-text-stroke-color: rgb(209, 35, 42); 
+    }
+    .die-symbol.proficiency:after {
+        color: rgb( 255, 241, 0);
+        -webkit-text-stroke-color: rgb( 255, 241, 0); 
+    }
+    
+}

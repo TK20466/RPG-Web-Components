@@ -1,0 +1,10 @@
+<div class="npc-wrapper">
+    <h4 ng-if="model.name">{{model.name}} <span ng-if="model.rank">[{{model.rank}}]</span></h4>
+    <statbar model="model"></statbar>
+    <detailbar model="model"></detailbar>
+    <ng-transclude></ng-transclude>
+    <skills-block></skills-block>
+    <talent-block talents="model.talents"></talent-block>
+    <abilities-block abilities="model.abilities"></abilities-block>
+    <equipment-block equipment="model.equipment"></equipment-block>
+</div>

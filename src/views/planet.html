@@ -1,0 +1,8 @@
+<md-slider-container>
+  <div flex="10" layout layout-align="center center">
+    <span class="md-body-1">Scarcity</span>
+  </div>
+  <md-slider flex md-discrete ng-model="item" step="1" min="-2" max="4" aria-label="Scarcity">
+  </md-slider>
+  <scarcity-display value="item" flex></scarcity-display>
+</md-slider-container>
