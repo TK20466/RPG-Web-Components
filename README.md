@@ -6,6 +6,10 @@ Please view the examples at: https://tk20466.github.io/
 
 Live example:  http://swrpg.sarah-bailey.com/
 
+**Usage**: just include the module in your application module.
+
+    var app = angular.module("myApp", ["swaor"]);
+
 To-do:
 
 * Finish documentation
