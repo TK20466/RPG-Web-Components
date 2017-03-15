@@ -15,6 +15,8 @@
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
+src/scripts/pkg/
+tmp/
 x64/
 x86/
 bld/
@@ -192,6 +194,9 @@ ClientBin/
 *.publishsettings
 node_modules/
 orleans.codegen.cs
+src/index.html
+src/app.js
+src/web.config
 
 # Since there are multiple workflows, uncomment next line to ignore bower_components
 # (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
