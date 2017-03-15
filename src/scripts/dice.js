@@ -55,12 +55,12 @@ app.directive("skill", function() {
             else {
                 $scope.adice = new Array($scope.rank - $scope.abty);
                 $scope.pdice = new Array(Math.min($scope.rank, $scope.abty));
-                var promote = Math.floor($scope.adice.length/2);
+                /*var promote = Math.floor($scope.adice.length/2);
                 for (var i = 0; i < promote; i++) {
                     $scope.pdice.push("");
                     $scope.adice.pop();
                     $scope.adice.pop();
-                }
+                }*/
             }
         }]
     }
