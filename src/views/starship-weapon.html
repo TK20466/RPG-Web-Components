@@ -1,0 +1,10 @@
+<div class="npc-equipment">
+    <div class="npc-details-bold">Weapons:</div>
+    <div class="npc-details-normal" ng-if="weapons" ng-repeat="item in weapons">
+        <span class="weapon-name">{{item.name}} </span><span class="weapon-details">(Fire Arc {{item.fireArc}}; Damage: {{item.damage}}; Critical: {{item.critical}}; Range [<span class="weapon-range">{{item.range}}</span>]; <span ng-if="item.linked">Linked {{item.linked}};</span> <span ng-if="item.blast">Blast {{item.blast}};</span> <span ng-if="item.breach">Breach {{item.breach}};</span> <span ng-if="item.guided">Guided {{item.guided}};</span> <span ng-if="item.ammo">Limited Ammo {{item.ammo}};</span> <span ng-if="item.slowFiring">Slow Firing {{item.slowFiring}};</span> <span ng-if="item.ion">Ion;</span><span dynamic="item.text"></span>)</span>
+        <br />
+    </div>
+    <div class="npc-details-normal" ng-if="!weapons">
+        None.
+    </div>
+</div>

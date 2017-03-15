@@ -1,0 +1,72 @@
+<div class="starship-wrapper">
+    <h4 ng-if="model.name">{{model.name}}</h4>
+    <vehicle-statbar model="model"></vehicle-statbar>
+    <ng-transclude></ng-transclude>
+    <div class="npc-equipment" ng-if="model.type">
+        <div class="npc-details-bold">Hull Type<span ng-if="model.ship">/Model</span>:</div>
+        <div class="npc-details-normal">
+            {{model.type}}<span ng-if="model.ship">/{{model.ship}}</span>
+        </div>
+    </div>
+    <div class="npc-equipment" ng-if="model.maker">
+        <div class="npc-details-bold">Manufacturer:</div>
+        <div class="npc-details-normal">
+            {{model.maker}}
+        </div>
+    </div>
+    <div class="npc-equipment">
+        <div class="npc-details-bold">Hyperdrive:</div>
+        <div class="npc-details-normal">
+            {{model.hyperdrive}}
+        </div>
+    </div>
+    <div class="npc-equipment">
+        <div class="npc-details-bold">Navicomputer:</div>
+        <div class="npc-details-normal">
+            {{model.navicomputer}}
+        </div>
+    </div>
+    <div class="npc-equipment">
+        <div class="npc-details-bold">Sensor Range:</div>
+        <div class="npc-details-normal">
+            {{model.sensorRange}}
+        </div>
+    </div>
+    <div class="npc-equipment">
+        <div class="npc-details-bold">Ship Complement:</div>
+        <div class="npc-details-normal">
+            {{model.crew}}
+        </div>
+    </div>
+    <div class="npc-equipment">
+        <div class="npc-details-bold">Encumbrance Capacity:</div>
+        <div class="npc-details-normal">
+            {{model.encum}}
+        </div>
+    </div>
+    <div class="npc-equipment">
+        <div class="npc-details-bold">Passenger Capacity:</div>
+        <div class="npc-details-normal">
+            {{model.passengers}}
+        </div>
+    </div>
+    <div class="npc-equipment" ng-if="model.consumables">
+        <div class="npc-details-bold">Consumables:</div>
+        <div class="npc-details-normal">
+            {{model.consumables}}
+        </div>
+    </div>
+    <div class="npc-equipment" ng-if="model.price">
+        <div class="npc-details-bold">Price<span ng-if="model.rarity">/Rarity</span>:</div>
+        <div class="npc-details-normal">
+            {{model.price}} credits<span ng-if="model.rarity">/{{model.rarity}}</span>
+        </div>
+    </div>
+    <div class="npc-equipment">
+        <div class="npc-details-bold">Customization Hard Points:</div>
+        <div class="npc-details-normal">
+            {{model.hardpoints}}
+        </div>
+    </div>
+    <starship-weapons-block weapons="model.weapons"></starship-weapons-block>
+</div>

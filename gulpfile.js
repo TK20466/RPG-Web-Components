@@ -4,7 +4,7 @@ var uglifycss = require('gulp-uglifycss');
 var concat = require('gulp-concat');
 var templates = require('gulp-angular-templatecache');
 var minifyHTML = require('gulp-htmlmin');
-var version = "0.9.0";
+var version = "0.9.1";
 
 gulp.task('templates', function () {
   gulp.src([
@@ -35,7 +35,7 @@ gulp.task("styles", function() {
 })
 
 gulp.task('release', ['fonts', 'images', 'styles','templates'], function() {
-    return gulp.src(['src/scripts/app.js', 'src/scripts/dice.js', 'src/scripts/**/*.js', '!./src/pkg/*', 'tmp/*.js'])
+    return gulp.src(['src/scripts/starship.js', 'src/scripts/dice.js', 'src/scripts/**/*.js', '!./src/pkg/*', 'tmp/*.js'])
 		  .pipe(concat('swrpgaor.min.js', {newLine: ';'}))
         .pipe(uglify())
         .pipe(gulp.dest('releases/' + version + "/scripts"));

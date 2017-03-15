@@ -18,12 +18,61 @@ body {
     text-align: center;
 }
 
-.stat-bar {
+.starship-wrapper {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.vehicle-stat-attributes {
+    width: 60%;
+    float: left;
+}
+
+.vehicle-stat-core {
+    float: left;
+    width: 40%;
+}
+
+.vehicle-defense-block-fore, .vehicle-defense-block-port, .vehicle-defense-block-starboard, .vehicle-defense-block-aft {
+    position: absolute;
+    text-align: center;
+    font-family: TeutonFett;
+    text-transform: uppercase;
+    bottom: 12%;
+    font-size: 4.5vw;
+}
+
+.vehicle-defense-block-fore {
+    left: 12%;
+}
+.vehicle-defense-block-port {
+    left: 36%;
+}
+.vehicle-defense-block-starboard {
+    right: 36%
+}
+.vehicle-defense-block-aft {
+    right: 12%
+}
+
+.stat-bar, .vehicle-stat-bar {
+    position: relative;
     width:  100%;
     max-width: 540px;
     margin:0 auto;
     margin-bottom: 5px;
+    background-color: transparent;
 }
+.stat-bar:before, .vehicle-stat-bar:before {
+    content: " ";
+    position: absolute;
+    width: 98%;
+    height: 58%;
+    background-color: rgb(169, 169, 163);
+    left: 1%;
+    top: 10%;
+}
+
 
 .npc-skills {
     width: 100%;
@@ -79,11 +128,10 @@ body {
     position:absolute;
 }
 
-.stat-bar:after, .detail-bar:after {
+.stat-bar:after, .detail-bar:after, .vehicle-stat-bar:after {
     clear: both;
     content: "";
-    display: table;
-
+    display: table;    
 }
 
 .npc-details-bold {
@@ -94,6 +142,31 @@ body {
     display: inline;
 }
 
+.vehicle-defense-block {
+    width: 66%;
+    height: 9.6vw;
+    max-height: 52.8px;
+    background-color: transparent;
+    background-image: url("/img/detailblock-vehicle-long.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:  relative;
+    float: left;
+}
+
+.vehicle-defense-block-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-family: TeutonMager;
+    font-style: italic;
+    text-transform: uppercase;
+    top: 10%;
+    font-size: 2vw;
+}
+
 .stat-block {
     display: inline-block;
     width: 16.667%;
@@ -101,11 +174,18 @@ body {
     height: 16.6vw;
     max-height:90px;
     box-sizing: border-box;
-    background-color: #eee;
+    background-color: transparent;
     background-image: url("/img/statblock.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+}
+
+.vehicle-stat-bar .stat-block {
+    background-image: url("/img/statblock-vehicle.png");
+    width: 33.33%;
+    height: 13.3vw;
+    max-height:72px;
 }
 
 .detail-block {
@@ -120,6 +200,33 @@ body {
     background-size:cover;
     background-repeat: no-repeat;
     position: relative;
+}
+
+.vehicle-stat-bar .detail-block {
+    background-image: url("/img/detailblock-vehicle.png");    
+    width: 33%;
+    max-height: 53px;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.vehicle-stat-bar .detail-block:nth-of-type(3) {
+    margin-left: 15%;
+    margin-right: 2px;
+    float: right;
+    margin-top: 1px;
+}
+.vehicle-stat-bar .detail-block:nth-of-type(4) {
+    margin-left: 12px;
+    margin-right: 2px;
+    float: right;
+    margin-top: 1px;
+}
+
+.vehicle-stat-bar .stat-block-value {
+    top: 22%;
+    font-size: 5.5vw;
 }
 
 .stat-block-value {
@@ -164,7 +271,7 @@ body {
     text-align: center;
     font-family: TeutonFett;
     text-transform: uppercase;
-    bottom: 15%;
+    bottom: 10%;
     font-size: 4.5vw;
 }
 
@@ -400,6 +507,10 @@ th {
     font-size:40px;
  }
 
+ .vehicle-stat-bar .stat-block-value {
+    font-size:30px;
+ }
+
  .stat-block-text {
     font-size:11px;
  }
@@ -407,10 +518,17 @@ th {
  .detail-block-text {
      font-size: 12px;
  }
+ 
+ .vehicle-defense-block-title {
+     font-size: 12px;
+ }
 
  .detail-block-value {
      font-size: 25px;
  }
+ .vehicle-defense-block-fore, .vehicle-defense-block-port, .vehicle-defense-block-starboard, .vehicle-defense-block-aft {
+     font-size: 22px;
+    }
 }
 
 @media all and (max-width: 900px) {
