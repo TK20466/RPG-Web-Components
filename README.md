@@ -7,9 +7,10 @@ Please view the examples at: https://tk20466.github.io/
 Live example:  http://swrpg.sarah-bailey.com/
 
 To-do:
-    WYSIWYG editor with preview
-    Minion group size handling
-    live-tracker for wounds/strain/group size
-    Ranged/Melee defense box
-    Better equipment management
-    EotE stylesheet
+    * Minion group size handling
+    * live-tracker for wounds/strain/group size
+    * Ranged/Melee defense box
+    * Better equipment management
+    * EotE stylesheet
+    * IE11 and Firefox support
+    * WYSIWYG editor with preview
