@@ -414,6 +414,48 @@ app.directive("despair", function() {
     }
 });
 
+app.directive("force", function() {
+    return {
+        templateUrl: "/views/diesymbol.html",
+        replace: true,
+        scope: {
+
+        },
+        restrict: "E",
+        controller: ['$scope', function($scope) {
+            $scope.symbol = "force";
+        }]
+    }
+});
+
+app.directive("lightSide", function() {
+    return {
+        templateUrl: "/views/diesymbol.html",
+        replace: true,
+        scope: {
+
+        },
+        restrict: "E",
+        controller: ['$scope', function($scope) {
+            $scope.symbol = "lightSide";
+        }]
+    }
+});
+
+app.directive("darkSide", function() {
+    return {
+        templateUrl: "/views/diesymbol.html",
+        replace: true,
+        scope: {
+
+        },
+        restrict: "E",
+        controller: ['$scope', function($scope) {
+            $scope.symbol = "darkSide";
+        }]
+    }
+});
+
 app.directive("check", function() {
     return {
         templateUrl: "/views/check.html",

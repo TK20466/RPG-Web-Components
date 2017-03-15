@@ -312,6 +312,11 @@ body {
     color: rgb( 255, 241, 0);
     -webkit-text-fill-color: rgb( 255, 241, 0); 
 }
+.die-symbol.force:after {
+    content: "c";
+    color: rgb(255, 255, 255);
+    -webkit-text-fill-color: rgb(255, 255, 255); 
+}
 .die-symbol.threat:after {
     content: "t";
    -webkit-text-stroke-width: 0px;
@@ -339,6 +344,16 @@ body {
 }
 .die-symbol.triumph:after {
     content: "x";
+   -webkit-text-stroke-width: 0px;
+   -webkit-text-stroke-color: none;
+}
+.die-symbol.lightSide:after {
+    content: "z";
+    color: rgb(255, 255, 255);
+    -webkit-text-fill-color: rgb(255, 255, 255); 
+}
+.die-symbol.darkSide:after {
+    content: "z";
    -webkit-text-stroke-width: 0px;
    -webkit-text-stroke-color: none;
 }

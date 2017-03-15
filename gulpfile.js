@@ -4,7 +4,7 @@ var uglifycss = require('gulp-uglifycss');
 var concat = require('gulp-concat');
 var templates = require('gulp-angular-templatecache');
 var minifyHTML = require('gulp-htmlmin');
-var version = "0.9.1";
+var version = "0.9.2";
 
 gulp.task('templates', function () {
   gulp.src([
