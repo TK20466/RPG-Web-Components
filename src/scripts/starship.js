@@ -77,7 +77,7 @@ module.directive("vehicleStatbar", function() {
         scope: {
             model: "=model",
         },
-        
+
         replace: true
     }
 });
@@ -90,9 +90,9 @@ module.directive("defenseBlock", function() {
             model: "=model",
         },
         controller: ['$scope', function($scope){
-            if ($scope.silhouette < 4) {
-                $scope.port = "-";
-                $scope.starboard = "-";
+            if ($scope.model && $scope.model.silhouette < 4) {
+                $scope.model.port = "-";
+                $scope.model.starboard = "-";
             }
         }],
         replace: true
