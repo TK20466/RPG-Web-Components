@@ -1,12 +1,11 @@
 # RPG-Web-Components
 An AoR-themed set of AngularJS directives and components
 
-
 Please view the examples at: https://tk20466.github.io/
 
 Live example:  http://swrpg.sarah-bailey.com/
 
-**Usage**: just include the module in your application module.
+**Usage**: just include the module in your application module after referencing AngularJS and the included javascript/css file.
 
     var app = angular.module("myApp", ["swaor"]);
 
