@@ -393,6 +393,17 @@ h4 {
     color: rgb(134, 109, 33);
     text-align: right;
 }
+
+div.starship-wrapper h4 {
+    max-width:540px;
+    margin: 0 auto 10px;
+}
+
+div.npc-wrapper h4 {
+    max-width:540px;
+    margin: 0 auto 10px;
+}
+
 h3 {
     font-size: 1.5em;
     color: rgb(202, 87, 25);
@@ -407,7 +418,11 @@ h1 {
    -webkit-text-stroke-width: 1px;
    -webkit-text-stroke-color: rgb(0, 174, 239);
    -webkit-text-fill-color:white; 
-   word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+body h1 {
+    margin-top:15px;
 }
 
 h2 + p:first-letter {
