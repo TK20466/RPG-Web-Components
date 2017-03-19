@@ -5,7 +5,8 @@ app.directive("skills", function() {
         replace: true,
         restrict: "E",
         link: function ($scope, $element, $attributes) {
-            $scope.$parent.model.skills = {};
+            if($scope.$parent.model.skills == null)
+                $scope.$parent.model.skills = {};
             $scope.skills = $scope.$parent.model.skills;
         }
     }
@@ -569,18 +570,18 @@ app.directive("narrative", function() {
 });
 
 
-var skillsTree = function() { return [{name: "Astrogation",           attribute: "intelligence",              },
+var skillsTree = function() { return [{name: "Astrogation",           attribute: "intellect",              },
 {name: "Athletics",               attribute: "brawn",              },
 {name: "Charm",                   attribute: "presence",              },
 {name: "Coercion",                attribute: "willpower",            },
-{name: "Computers",               attribute: "intelligence",             },
+{name: "Computers",               attribute: "intellect",             },
 {name: "Cool",                    attribute: "presence",              },
 {name: "Coordination",            attribute: "agility",              },
 {name: "Deception",               attribute: "cunning",             },
 {name: "Discipline",              attribute: "willpower",            },
 {name: "Leadership",              attribute: "presence",              },
-{name: "Mechanics",               attribute: "intelligence",             },
-{name: "Medicine",                attribute: "intelligence",             },
+{name: "Mechanics",               attribute: "intellect",             },
+{name: "Medicine",                attribute: "intellect",             },
 {name: "Negotiation",             attribute: "presence",              },
 {name: "Perception",              attribute: "cunning",             },
 {name: "Piloting (Planetary)",    attribute: "agility",              alias: "pilotingPlanetary"},
@@ -596,12 +597,12 @@ var skillsTree = function() { return [{name: "Astrogation",           attribute:
 {name: "Melee",                   attribute: "brawn",              },
 {name: "Ranged (Light)",          attribute: "agility",              alias: "rangedLight"},
 {name: "Ranged (Heavy)",          attribute: "agility",              alias: "rangedHeavy"},
-{name: "Core Worlds",             attribute: "intelligence",             alias:"coreWorlds"},
-{name: "Education",               attribute: "intelligence",             },
-{name: "Lore",                    attribute: "intelligence",             },
-{name: "Outer Rim",               attribute: "intelligence",             alias: "outerRim"},
-{name: "Underworld",              attribute: "intelligence",             },
-{name: "Xenology",                attribute: "intelligence",             }]; };
+{name: "Core Worlds",             attribute: "intellect",             alias:"coreWorlds"},
+{name: "Education",               attribute: "intellect",             },
+{name: "Lore",                    attribute: "intellect",             },
+{name: "Outer Rim",               attribute: "intellect",             alias: "outerRim"},
+{name: "Underworld",              attribute: "intellect",             },
+{name: "Xenology",                attribute: "intellect",             }]; };
 
 app.factory("skillInfo", [function() {
     return skillsTree();

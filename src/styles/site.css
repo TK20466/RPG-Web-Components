@@ -365,7 +365,7 @@ body {
     text-transform: capitalize;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, caption {
     text-transform: uppercase;
 }
 
@@ -374,11 +374,18 @@ h1, h2, h3, h4, h5 {
     font-weight: bold;
 }
 
-h6 {
+caption {
     font-family: TeutonFett;
     font-weight: normal;
     font-size: 1.3em;
     color: rgb(18, 130, 135);
+    text-align: left;
+    margin-bottom:2px;
+}
+
+h5 {
+    font-size: 1.15em;
+    color: rgb(35, 134, 158);
 }
 
 h5 {
@@ -391,6 +398,11 @@ h4 {
     font-size: 1.2em;
     color: rgb(134, 109, 33);
     text-align: right;
+}
+
+div.starship-wrapper h4 {
+    max-width:540px;
+    margin: 0 auto 10px;
 }
 
 div.npc-wrapper h4 {
