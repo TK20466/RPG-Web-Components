@@ -1,6 +1,6 @@
 html {
 
-    background-image: url("/img/right_page.png");
+    background-image: url("/img/right_page.jpg");
     background-repeat: repeat-y;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -374,7 +374,7 @@ h1, h2, h3, h4, h5 {
     font-weight: bold;
 }
 
-caption {
+h6, caption {
     font-family: TeutonFett;
     font-weight: normal;
     font-size: 1.3em;
