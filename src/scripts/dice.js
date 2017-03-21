@@ -1,4 +1,26 @@
-var app = angular.module("swaor", ["starship"]);
+var app = angular.module("swrpgwc", ["starship", "jdf.ngThemeSwitcher", 'ngStorage']);
+
+app.controller("ThemeController", function($scope, $localStorage, $location) {
+   $scope.currentLocation = function() { return $location.path(); }
+   $scope.themes = [
+        { name:'EoE', description: 'Edge of Empire Theme', url:'/styles/swrpgeoe.min.css' },
+        { name:'AoR', description: 'Age of Rebellion Theme', url:'/styles/swrpgaor.min.css' },
+	{ name:'FaD', description: 'Force and Destiny Theme', url:'/styles/swrpgfad.min.css' }
+   ];
+   
+   $scope.$storage = $localStorage.$default({
+	   theme: $scope.themes[0]
+   });
+
+   $scope.setTheme = function(theme) {
+	   if (theme.name !== $scope.theme.name) {
+		   $scope.theme = theme;
+		   $scope.$storage.theme = theme;
+	   }
+   };
+
+   $scope.theme = $scope.$storage.theme;
+});
 
 app.directive("skills", function() {
     return {
