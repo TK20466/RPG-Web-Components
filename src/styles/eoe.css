@@ -1,6 +1,6 @@
 html {
 
-    background-image: url("/img/right_page.jpg");
+    background-image: url("/img/EoE_background_page.jpg");
     background-repeat: repeat-y;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -378,19 +378,19 @@ h6, caption {
     font-family: TeutonFett;
     font-weight: normal;
     font-size: 1.3em;
-    color: rgb(18, 130, 135);
+    color: rgb(64, 81, 58);
     text-align: left;
     margin-bottom:2px;
 }
 
 h5 {
     font-size: 1.15em;
-    color: rgb(35, 134, 158);
+    color: rgb(97, 8, 16);
 }
 
 h4 {
     font-size: 1.2em;
-    color: rgb(134, 109, 33);
+    color: rgb(115, 91, 16);
     text-align: right;
 }
 
@@ -406,17 +406,17 @@ div.npc-wrapper h4 {
 
 h3 {
     font-size: 1.5em;
-    color: rgb(202, 87, 25);
+    color: rgb(97, 8, 16);
 }
 h2 {
     font-size: 2.1em;
-    color: rgb(18, 130, 155);
+    color: rgb(66, 83, 58);
 }
 h1 {
     font-size: 3.9em;
     color: white;
    -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: rgb(0, 174, 239);
+   -webkit-text-stroke-color: rgb(66, 83, 58);
    -webkit-text-fill-color:white; 
     word-wrap: break-word;
 }
@@ -426,7 +426,7 @@ body h1 {
 }
 
 h2 + p:first-letter {
-    color: rgb(18, 130, 155);
+    color: rgb(66, 83, 58);
     font-size:2.4em;
     float:left;
     font-weight:bold;
@@ -484,15 +484,15 @@ h2 + p:first-letter {
 }
 
 .blackbox {
-    color: rgb(191, 191, 190);
+    color: rgb(243, 244, 237);
     font-weight:500;    
-    background-color: rgba(46, 60, 75, .95);
+    background-color: rgba(30, 40, 41, .75);
 }
 
 .blackbox.cornered h4 {
     text-align: center;
     padding-top: 10px;
-    color: rgb(191, 191, 190);
+    color: rgb(164, 153, 124);
     font-family: TeutonFett;
     font-weight: bold;
     font-size: 1.4em;
@@ -515,7 +515,7 @@ table {
 }
 
 tbody tr:nth-child(odd) {
-    background-color: rgb(236, 207, 186);
+    background-color: rgba(197, 197, 189, 1);
 }
 
 td {
@@ -524,7 +524,7 @@ td {
 }
 
 th {
-    background-color: rgb(168, 71, 14);
+    background-color: rgb(66, 83, 58);
     border: 1px solid rgb(147, 149, 152);
     color: white;
     font-family: TeutonFett;
