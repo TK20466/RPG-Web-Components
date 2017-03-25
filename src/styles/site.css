@@ -1,6 +1,6 @@
 html {
 
-    background-image: url("/img/right_page.png");
+    background-image: url("img/right_page.png");
     background-repeat: repeat-y;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -147,7 +147,7 @@ body {
     height: 9.6vw;
     max-height: 52.8px;
     background-color: transparent;
-    background-image: url("/img/detailblock-vehicle-long.png");
+    background-image: url("img/detailblock-vehicle-long.png");
     background-repeat: no-repeat;
     background-size: cover;
     position:  relative;
@@ -175,14 +175,14 @@ body {
     max-height:90px;
     box-sizing: border-box;
     background-color: transparent;
-    background-image: url("/img/statblock.png");
+    background-image: url("img/statblock.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 
 .vehicle-stat-bar .stat-block {
-    background-image: url("/img/statblock-vehicle.png");
+    background-image: url("img/statblock-vehicle.png");
     width: 33.33%;
     height: 13.3vw;
     max-height:72px;
@@ -196,14 +196,14 @@ body {
     height: 10vw;
     margin-left: 6.2%;
     margin-right: 6.29%;
-    background-image: url("/img/detailblock.png");
+    background-image: url("img/detailblock.png");
     background-size:cover;
     background-repeat: no-repeat;
     position: relative;
 }
 
 .vehicle-stat-bar .detail-block {
-    background-image: url("/img/detailblock-vehicle.png");    
+    background-image: url("img/detailblock-vehicle.png");    
     width: 33%;
     max-height: 53px;
     float: left;
