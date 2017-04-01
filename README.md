@@ -1,7 +1,7 @@
 # RPG-Web-Components
 An AoR-themed set of AngularJS directives and components
 
-Please view the examples at: https://tk20466.github.io/
+Please view the examples at: https://tk20466.github.io/RPG-Web-Components/
 
 Live example:  http://swrpg.sarah-bailey.com/
 
@@ -10,6 +10,11 @@ Live example:  http://swrpg.sarah-bailey.com/
 **Usage**: just include the module in your application module after referencing AngularJS and the included javascript/css file.
 
     var app = angular.module("myApp", ["swaor"]);
+
+**Themes**: You can change the style theme by changing the class on your `<html>` element
+
+    <html class="edge-of-the-empire-themed">
+    <html class="age-of-rebellion-themed">
 
 **Building**: Make sure you have the following NPM packages installed:
  * [gulp](https://www.npmjs.com/package/gulp)
