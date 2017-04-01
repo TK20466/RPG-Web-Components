@@ -1,0 +1,283 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/styles/swrpgaor.min.css">
+  <link rel="stylesheet" href="/styles/examples.css">
+  <title>SWRPG AngularJS Directives by Sarah Bailey</title>
+</head>
+<body ng-app="myApp" ng-cloak>
+
+<h3>Table of Contents</h3>
+<ul>
+   <li><a href="#setup">Setup</a></li>
+   <li><a href="#typography">Typography</a></li>
+   <li><a href="#statbars">Stat Bars</a></li>
+   <li><a href="#wrappers">Containers</a></li>
+</ul>
+
+<p>These documents are a WIP.  Please view the source code for a full list of directives and attributes.</p>
+
+<h2 id="setup">Setup</h2>
+<p>The SWRPG AngularJS Directives required AngularJS to run. Simply reference both swaor.min.js and swaor.min.css in your project.  They must be refereneced <i>after</i> AngularJS core is referenced.
+Finally, you'll need to reference the module in your main angularJS app, for example: <code>var app = angular.module("myApp", ["swaor"]);</code></p>
+
+<h5>Quick-start Example</h5>
+<pre>
+   <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="en" &gt;
+         &lt;head&gt;
+           &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+           &lt;link rel="stylesheet" href="/styles/swrpgaor.min.css"&gt;
+           &lt;title&gt;My Campaign&lt;/title&gt;
+         &lt;/head&gt;
+         &lt;body ng-app="myApp" ng-cloak&gt;
+            &lt;h1&gt;A long time ago in a galaxy far far away...&lt;/h1&gt;
+         &lt;/body&gt;
+         &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"&gt;&lt;/script&gt;
+         &lt;script src="/scripts/swrpgaor.min.js"&gt;&lt;/script&gt;
+         &lt;script&gt;
+         var app = angular.module("myApp", ['swaor']);
+         &lt;/script&gt;
+      &lt;/html&gt;
+   </code>
+</pre>
+
+
+<h2 id="typography">Typography</h2>
+<h3>Basic typography</h3>
+<pre>
+   <code>
+      &lt;b&gt;Bold Text&lt;/b&gt;
+      &lt;i&gt;Italic Text&lt;/i&gt;
+      &lt;h5&gt;Heading 5&lt;/h5&gt;
+      &lt;h4&gt;Heading 4&lt;/h4&gt;
+      &lt;h3&gt;Heading 3&lt;/h3&gt;
+      &lt;h2&gt;Heading 2&lt;/h2&gt;
+      &lt;h1&gt;Heading 1&lt;/h1&gt;
+   </code>
+</pre>
+
+<b>Bold Text</b><br />
+<i>Italic Text</i>
+<h5>Heading 5</h5>
+<h4>Heading 4</h4>
+<h3>Heading 3</h3>
+<h2>Heading 2</h2>
+<h1>Heading 1</h1>
+
+<h3>Dice Values</h3>
+
+<pre>
+   <code>
+   Boost Die: &lt;boost&gt;&lt;/boost&gt;
+   Setback Die: &lt;setback&gt;&lt;/setback&gt;
+   Ability Die: &lt;ability&gt;&lt;/ability&gt;
+   Difficulty Die: &lt;difficulty&gt;&lt;/difficulty&gt;
+   Proficiency Die: &lt;proficiency&gt;&lt;/proficiency&gt;
+   Challenge Die: &lt;challenge&gt;&lt;/challenge&gt;
+   Force Die: &lt;force&gt;&lt;/force&gt;
+   Success Result: &lt;success&gt;&lt;/success&gt;
+   Failure Result: &lt;failure&gt;&lt;/failure&gt;
+   Advantage Result: &lt;advantage&gt;&lt;/advantage&gt;
+   Threat Result: &lt;threat&gt;&lt;/threat&gt;
+   Triumph Result: &lt;triumph&gt;&lt;/triumph&gt;
+   Despair Result: &lt;despair&gt;&lt;/despair&gt;
+   Light Side Result: &lt;light-side&gt;&lt;/light-side&gt;
+   Dark Side Result: &lt;dark-side&gt;&lt;/dark-side&gt;
+   </code>
+</pre>
+
+
+Boost Die: <boost></boost><br />
+Setback Die: <setback></setback><br />
+Ability Die: <ability></ability><br />
+Difficulty Die: <difficulty></difficulty><br />
+Proficiency Die: <proficiency></proficiency><br />
+Challenge Die: <challenge></challenge><br />
+Force Die: <force></force><br />
+Success Result: <success></success><br />
+Failure Result: <failure></failure><br />
+Advantage Result: <advantage></advantage><br />
+Threat Result: <threat></threat><br />
+Triumph Result: <triumph></triumph><br />
+Despair Result: <despair></despair><br />
+Light Side Result: <light-side></light-side><br />
+Dark Side Result: <dark-side></dark-side><br />
+
+<p>You can also specify any dice result using the <code class="inline">&lt;die type="boost"&gt;&lt;/die&gt;</code> directive by passing the name of the symbol as the <b>Type</b> attribute.</p>
+
+<h3>Skill checks</h3>
+<pre>
+   <code>
+      Make an &lt;check skill="piloting" dif="2"&gt;&lt;/check&gt; to navigate the asteroid field.
+      Make a &lt;check skill="athletics" dif="2" chg="1"&gt;&lt;/check&gt; to jump across the building in the rain.
+      Make a &lt;check skill="Opposed Charm vs Discipline" dif="2" chg="1"&gt;&lt;/check&gt; to talk the Imperial Officer into giving away the codes.
+   </code>
+</pre>
+
+Make an <check skill="piloting" dif="2"></check> to navigate the asteroid field.<br />
+Make a <check skill="athletics" dif="2" chg="1"></check> to jump across the building in the rain.<br />
+Make a <check skill="Opposed Charm vs Discipline" dif="2" chg="1"></check> to talk the Imperial Officer into giving away the codes.<br />
+
+<h2 id="statbars">Stat Bars</h2>
+<h3>NPCs</h3>
+<p>NPC statlines can be quickly created using the <code class="inline">&lt;npc&gt;&lt;/npc&gt;</code> directive.  Simply pass a values for each characteristic as attributes and a name.  It's advisable to also pass a rank, as minion dice pools should not be calculated until a number of minions is determined.</p>
+<p>Under the NPC directive you can add the <code class="inline">&lt;skills&gt;&lt;/skills&gt;</code> directive, passing rank counts for any relevant skills the NPC has.  These will display dice pools on the rendered view.</p>
+<p>You can further add abilities text to your NPC with the  <code class="inline">&lt;abilities&gt;&lt;/abilities&gt;</code> directive.  Any text between the tags will be added to the abilities section on your NPC</p>
+<p>Finally, to add weapons to your NPC, add a <code class="inline">&lt;weapons&gt;&lt;/weapons&gt;</code> directive for each weapon in their inventory.  You can pass statistical values as attributes for different abilities, however do note <b>critical, damage, skill, and name are all required attributes</b></p>
+<pre>
+<code>
+    &lt;npc name="Example NPC" rank="nemesis" brawn="3" agility="2" intelligence="2" willpower="2" cunning="3" presence="4" soak="3" wounds="15" strain="10"&gt;<br />
+        &lt;skills athletics="2" ranged-light="4" /&gt;<br />
+        &lt;abilities&gt;Add &lt;boost&gt;&lt;/boost&gt; when making a Persuasion Check&lt;/abilities&gt;<br />
+        &lt;weapon name="frag grenades" skill="Ranged (Light)" damage="2" pierce="5" blast="9" critical="5" range="short" ammo="1" quantity="3"&gt;&lt;/weapon&gt;<br />
+    &lt;/npc&gt;
+</code>
+</pre>
+<npc name="Example NPC" rank="nemesis" brawn="3" agility="2" intelligence="2" willpower="2" cunning="3" presence="4" soak="3" wounds="15" strain="10">
+    <skills athletics="2" ranged-light="4" />
+    <abilities>Add <boost></boost> when making a Persuasion Check</abilities>
+    <weapon name="frag grenades" skill="Ranged (Light)" damage="2" pierce="5" blast="9" critical="5" range="short" ammo="1" quantity="3"></weapon>
+</npc>
+
+<h3>Vehicles</h3>
+<pre>
+   <code>
+      &lt;vehicle name="Example Light Starfighter" speed="5" silhouette="3" fore="1" aft="0" armor="1" hull="10" system="6" type="Starfighter" ship="ExampleShip" maker="Spaceships, Inc" hyperdrive="Primary: Class 3, Backup: None" navicomputer="true" encum="7" consumables="One day" price="65,000" rarity="6" hardpoints="5"&gt;
+          &lt;starship-weapon damage="4" critical="4" name="Twin wing-mounted light blaster cannons" arc="forward" linked="1"&gt;&lt;/starship-weapon&gt;
+          &lt;starship-weapon damage="6" critical="3" blast="4" breach="4" guided="3" ammo="2" slow-firing="1" name="Forward mounted concussion missile launcher" arc="forward" linked="1"&gt;&lt;/starship-weapon&gt;
+          &lt;starship-weapon damage="5" critical="4" name="Forward mounted light ion cannon" arc="forward" ion="true"&gt;&lt;/starship-weapon&gt;
+      &lt;/vehicle&gt;
+   </code>
+</pre>
+
+<vehicle name="Example Light Starfighter" speed="5" silhouette="3" fore="1" aft="0" armor="1" hull="10" system="6" type="Starfighter" ship="ExampleShip" maker="Spaceships, Inc" hyperdrive="Primary: Class 3, Backup: None" navicomputer="true" encum="7" consumables="One day" price="65,000" rarity="6" hardpoints="5">
+    <starship-weapon damage="4" critical="4" name="Twin wing-mounted light blaster cannons" arc="forward" linked="1"></starship-weapon>
+    <starship-weapon damage="6" critical="3" blast="4" breach="4" guided="3" ammo="2" slow-firing="1" name="Forward mounted concussion missile launcher" arc="forward" linked="1"></starship-weapon>
+    <starship-weapon damage="5" critical="4" name="Forward mounted light ion cannon" arc="forward" ion="true"></starship-weapon>
+</vehicle>
+
+<h2 id="wrappers">containers</h2>
+
+<h3>narrative text</h3>
+<code>
+    &lt;narrative&gt;<br />
+        &lt;p&gt;<br />
+            The holo-transmission zooms in on the Emperor's throne, where he is about to speak.  The lighting is dark, and to each entrance of his spire a crimson Royal Guard stands watch.
+        &lt;/p&gt;<br />
+        &lt;p&gt;<br />
+            "The Empire is on the verge of success.  Soon peace and order will be restored throughout the galaxy.  Even now our capable forces lead by Darth Vader are striking back at the rebel insurgents."
+        &lt;/p&gt;<br />
+    &lt;/narrative&gt;<br />
+</code>
+<narrative>
+    <p>The holo-transmission zooms in on the Emperor's throne, where he is about to speak.  The lighting is dark, and to each entrance of his spire a crimson Royal Guard stands watch.</p>
+    <p>"The Empire is on the verge of success.  Soon peace and order will be restored throughout the galaxy.  Even now our capable forces lead by Darth Vader are striking back at the rebel insurgents."</p>
+</narrative>
+
+
+<h3>mechanic text</h3>
+<code>
+    &lt;blackbox title="how dice work"&gt;<br />
+        &lt;p&gt;<br />
+            Success &lt;success&gt;&lt;/success&gt; rolls mean your character successfully completed a task.  They are a very important mechanic and need to be tracked.  They're cancelled by Failure results, but that's okay because you'll roll more successes than failures if your character doesn't try anything too silly!
+        &lt;/p&gt;<br />
+        &lt;p&gt;<br />
+            Failure &lt;failure&gt;&lt;/failure&gt; rolls mean your character failed at completing a task.  If your character rolled too many of these, you probably tried a task that you shouldn't have.  That's too bad, don't do that next time!
+        &lt;/p&gt;<br />
+    &lt;/blackbox&gt;<br />
+</code>
+<blackbox  title="how dice work">
+    <p>Success <success></success> rolls mean your character successfully completed a task.  They are a very important mechanic and need to be tracked.  They're cancelled by Failure results, but that's okay because you'll roll more successes than failures if your character doesn't try anything too silly!</p>
+    <p>Failure <failure></failure> rolls mean your character failed at completing a task.  If your character rolled too many of these, you probably tried a task that you shouldn't have.  That's too bad, don't do that next time!</p>
+</blackbox>
+
+<h3>Tables</h3>
+<p>Tables add a nice flare to your documents, letting you organize suggestions, results, or other information in a handy and visually stimulating way.  It is highly suggested that you use the <a href="https://github.com/awerlang/angular-responsive-tables">Angular Responsive Table</a> plugin to make your tables pivot on mobile views such as phones.</p>
+<pre>
+   <code>
+      &lt;h5&gt;Table 1 - 1: Event Seeds&lt;/h5&gt;
+      &lt;table&gt;
+          &lt;thead&gt;
+              &lt;tr&gt;
+                  &lt;th&gt;Event Seed&lt;/th&gt;
+                  &lt;th&gt;Summary&lt;/th&gt;
+                  &lt;th&gt;Page #&lt;/th&gt;
+              &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;Fears of the Village&lt;/td&gt;
+                  &lt;td&gt;The PCs visit Darrastead village, a settlement in the Onderon jungle. The village has been subjugated by the Empire, and the PCs might be able to win over its oppressed inhabitants.&lt;/td&gt;
+                  &lt;td&gt;10&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;Might of the Beast Riders&lt;/td&gt;
+                  &lt;td&gt;The PCs encounter the legendary Beast Riders, mighty warriors who ride the massive fauna of the jungles. The Beast Riders could be powerful allies, if the PCs can convince them they too oppose the Empire�and that they have a chance of winning!&lt;/td&gt;
+                  &lt;td&gt;13&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;Securing the Signal&lt;/td&gt;
+                  &lt;td&gt;A Rebel operative has been captured by the Empire. He is a communications specialist, and if the PCs free him, he can assist them with operating the SigInt array at their base.&lt;/td&gt;
+                  &lt;td&gt;20&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;New Toys&lt;/td&gt;
+                  &lt;td&gt;The PCs visit Iziz, the capital of Onderon. There, they have the chance to recover supplies by bargaining with Kavia Slen, a local junk dealer.&lt;/td&gt;
+                  &lt;td&gt;25&lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;/tbody&gt;
+      &lt;/table&gt;
+   </code>
+</pre>
+
+<h5>Table 1 - 1: Event Seeds</h5>
+<table>
+    <thead>
+        <tr>
+            <th>Event Seed</th>
+            <th>Summary</th>
+            <th>Page #</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Fears of the Village</td>
+            <td>The PCs visit Darrastead village, a settlement in the Onderon jungle. The village has been subjugated by the Empire, and the PCs might be able to win over its oppressed inhabitants.</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Might of the Beast Riders</td>
+            <td>The PCs encounter the legendary Beast Riders, mighty warriors who ride the massive fauna of the jungles. The Beast Riders could be powerful allies, if the PCs can convince them they too oppose the Empire and that they have a chance of winning!</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>Securing the Signal</td>
+            <td>A Rebel operative has been captured by the Empire. He is a communications specialist, and if the PCs free him, he can assist them with operating the SigInt array at their base.</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>New Toys</td>
+            <td>The PCs visit Iziz, the capital of Onderon. There, they have the chance to recover supplies by bargaining with Kavia Slen, a local junk dealer.</td>
+            <td>25</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
+
+<!-- Angular Material Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+<script src="/scripts/swrpgaor.min.js"></script>
+<script>
+var app = angular.module("myApp", ['swaor'])
+</script>
+</html>
