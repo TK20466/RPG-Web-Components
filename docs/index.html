@@ -43,6 +43,16 @@ Finally, you'll need to reference the module in your main angularJS app, for exa
    </code>
 </pre>
 
+<h5>Themeing</h5>
+<p>By default, the Age of Rebellion styles are used.  You can change the theme by adding a class to the <code class="inline">&lt;html&gt;</code> element, or another contain element.</p>
+<pre>
+    <code>
+        &lt;html class="age-of-rebellion-themed"&gt;
+        &lt;html class="edge-of-the-empire-themed"&gt;
+    </code>
+</pre>
+<
+
 
 <h2 id="typography">Typography</h2>
 <h3>Basic typography</h3>
@@ -197,8 +207,8 @@ Make a <check skill="Opposed Charm vs Discipline" dif="2" chg="1"></check> to ta
 <p>Tables add a nice flare to your documents, letting you organize suggestions, results, or other information in a handy and visually stimulating way.  It is highly suggested that you use the <a href="https://github.com/awerlang/angular-responsive-tables">Angular Responsive Table</a> plugin to make your tables pivot on mobile views such as phones.</p>
 <pre>
    <code>
-      &lt;h5&gt;Table 1 - 1: Event Seeds&lt;/h5&gt;
       &lt;table&gt;
+          &lt;caption&gt;Table 1 - 1: Event Seeds&lt;/caption&gt;
           &lt;thead&gt;
               &lt;tr&gt;
                   &lt;th&gt;Event Seed&lt;/th&gt;
@@ -232,8 +242,8 @@ Make a <check skill="Opposed Charm vs Discipline" dif="2" chg="1"></check> to ta
    </code>
 </pre>
 
-<h5>Table 1 - 1: Event Seeds</h5>
 <table>
+<caption>Table 1 - 1: Event Seeds</caption>
     <thead>
         <tr>
             <th>Event Seed</th>
