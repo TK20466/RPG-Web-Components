@@ -1,0 +1,126 @@
+$h2color: rgb(82, 100, 74);
+$h3color: rgb(118, 18, 19);
+$h4color: rgb(135, 109, 34);
+$h4-boxcolor: rgb(179, 166, 142);
+$h5color: $h3color;
+$block-bg: rgb(179, 166, 144);
+$caption-color: rgb(82, 100, 74);
+$tableHeader: $caption-color;
+$tdStripe: rgb(207, 208, 201);
+$caption-color-blackbox: white;
+$tdStripe-blackbox: black;
+$tableHeader-blackbox: rgb(118, 18, 19);
+$tableBorder-blackbox: rgb(147, 149, 152);
+$blackbox: rgb(70, 80, 80);
+
+
+html.edge-of-the-empire-themed {
+   background-image: url("../img/right_page.png");
+}
+
+.edge-of-the-empire-themed {
+
+   .vehicle-stat-bar:before {
+       background-color: rgb(169, 169, 163);
+   }
+
+   .stat-bar:before {
+       background-color: $block-bg;
+   }
+
+
+   .vehicle-defense-block {
+       background-image: url("../img/detailblock-vehicle-long.png");
+   }
+
+   .stat-block {
+       background-image: url("../img/eote-statblock.png");
+   }
+
+   .vehicle-stat-bar .stat-block {
+       background-image: url("../img/statblock-vehicle.png");
+   }
+
+   .detail-block {
+       background-image: url("../img/eote-detailblock.png");
+   }
+
+
+   .vehicle-stat-bar .detail-block {
+       background-image: url("../img/detailblock-vehicle.png");
+   }
+
+   caption {
+       color: $caption-color;
+   }
+
+   h5 {
+       color: $h5color;
+   }
+
+   h4 {
+       color: $h4color;
+   }
+
+   h3 {
+       color: $h3color;
+   }
+   h2 {
+       color: $h2color;
+   }
+   h1 {
+       color: rgb(161, 88, 56);
+       -webkit-text-fill-color: rgb(161, 88, 56);
+       -webkit-text-stroke-width: 0px;
+       -webkit-text-stroke-color: transparent;
+   }
+
+   h2 + p:first-letter {
+       color: $h2color;
+   }
+
+   .redbox {
+       color: rgb(239, 224, 113);
+       background-color: rgb(114, 18, 20);
+   }
+
+   .blackbox {
+       color: rgb(191, 191, 190);
+       background-color: $blackbox;
+       caption {
+          color: $caption-color-blackbox;
+       }
+       tbody tr:nth-child(odd) {
+           background-color: $tdStripe-blackbox;
+       }
+       th {
+          background-color: $tableHeader-blackbox;
+          border-color: $tableBorder-blackbox;
+          color: white;
+          border-top: none;
+       }
+       td {
+          color: white;
+          border-color: $tableBorder-blackbox;
+       }
+
+   }
+
+   .blackbox.cornered h4 {
+       color: $h4-boxcolor;
+   }
+
+   tbody tr:nth-child(odd) {
+       background-color: $tdStripe;
+   }
+
+   td {
+       border: 1px solid rgb(147, 149, 152);
+   }
+
+   th {
+       background-color: $tableHeader;
+       border: 1px solid rgb(147, 149, 152);
+       color: white;
+   }
+}

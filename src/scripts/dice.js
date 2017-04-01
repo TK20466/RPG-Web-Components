@@ -197,7 +197,8 @@ app.directive("weapon", ['$sce', function($sce) {
                pierce: scope.pierce,
                ammo: scope.limitedAmmo,
                autoFire: scope.autoFire,
-               vicious: scope.vicious
+               vicious: scope.vicious,
+               stun: scope.stun
            };
            transclude(scope, function(clone, scope) {
                var html = "";

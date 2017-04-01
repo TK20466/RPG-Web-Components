@@ -1,0 +1,89 @@
+
+html.edge-of-the-empire-themed {
+   background-image: url("../img/right_page.png");
+}
+
+.age-of-rebellion-themed {
+
+   .stat-bar:before, .vehicle-stat-bar:before {
+       background-color: rgb(169, 169, 163);
+   }
+
+
+   .vehicle-defense-block {
+       background-image: url("../img/detailblock-vehicle-long.png");
+   }
+
+   .stat-block {
+       background-image: url("../img/statblock.png");
+   }
+
+   .vehicle-stat-bar .stat-block {
+       background-image: url("../img/statblock-vehicle.png");
+   }
+
+   .detail-block {
+       background-image: url("../img/detailblock.png");
+   }
+
+
+   .vehicle-stat-bar .detail-block {
+       background-image: url("../img/detailblock-vehicle.png");
+   }
+
+   caption {
+       color: rgb(18, 130, 135);
+   }
+
+   h5 {
+       color: rgb(35, 134, 158);
+   }
+
+   h4 {
+       color: rgb(134, 109, 33);
+   }
+
+   h3 {
+       color: rgb(202, 87, 25);
+   }
+   h2 {
+       color: rgb(18, 130, 155);
+   }
+   h1 {
+       color: white;
+      -webkit-text-stroke-color: rgb(0, 174, 239);
+      -webkit-text-fill-color:white;
+   }
+
+   h2 + p:first-letter {
+       color: rgb(18, 130, 155);
+   }
+
+   .redbox {
+       color: rgb(239, 224, 113);
+       background-color: rgb(114, 18, 20);
+   }
+
+   .blackbox {
+       color: rgb(191, 191, 190);
+       background-color: rgba(46, 60, 75, .95);
+   }
+
+   .blackbox.cornered h4 {
+       color: rgb(191, 191, 190);
+   }
+
+   tbody tr:nth-child(odd) {
+       background-color: rgb(236, 207, 186);
+   }
+
+   td {
+       border: 1px solid rgb(147, 149, 152);
+   }
+
+   th {
+       background-color: rgb(168, 71, 14);
+       border: 1px solid rgb(147, 149, 152);
+       color: white;
+   }
+}

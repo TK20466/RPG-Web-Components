@@ -4,7 +4,7 @@ var uglifycss = require('gulp-uglifycss');
 var concat = require('gulp-concat');
 var templates = require('gulp-angular-templatecache');
 var minifyHTML = require('gulp-htmlmin');
-var version = "0.9.4";
+var version = "0.9.5";
 
 gulp.task('templates', function () {
   gulp.src([
@@ -28,7 +28,7 @@ gulp.task("images", function() {
 })
 
 gulp.task("styles", function() {
-   gulp.src(['src/styles/*.css'])
+   gulp.src(['src/styles/site.css', 'src/styles/*.css'])
       .pipe(concat('swrpgaor.min.css'))
       .pipe(uglifycss())
       .pipe(gulp.dest('releases/' + version + "/styles"))

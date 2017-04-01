@@ -1,0 +1,85 @@
+html.edge-of-the-empire-themed {
+  background-image: url("../img/right_page.png");
+}
+
+.age-of-rebellion-themed .stat-bar:before, .age-of-rebellion-themed .vehicle-stat-bar:before {
+  background-color: #a9a9a3;
+}
+
+.age-of-rebellion-themed .vehicle-defense-block {
+  background-image: url("../img/detailblock-vehicle-long.png");
+}
+
+.age-of-rebellion-themed .stat-block {
+  background-image: url("../img/statblock.png");
+}
+
+.age-of-rebellion-themed .vehicle-stat-bar .stat-block {
+  background-image: url("../img/statblock-vehicle.png");
+}
+
+.age-of-rebellion-themed .detail-block {
+  background-image: url("../img/detailblock.png");
+}
+
+.age-of-rebellion-themed .vehicle-stat-bar .detail-block {
+  background-image: url("../img/detailblock-vehicle.png");
+}
+
+.age-of-rebellion-themed caption {
+  color: #128287;
+}
+
+.age-of-rebellion-themed h5 {
+  color: #23869e;
+}
+
+.age-of-rebellion-themed h4 {
+  color: #866d21;
+}
+
+.age-of-rebellion-themed h3 {
+  color: #ca5719;
+}
+
+.age-of-rebellion-themed h2 {
+  color: #12829b;
+}
+
+.age-of-rebellion-themed h1 {
+  color: white;
+  -webkit-text-stroke-color: #00aeef;
+  -webkit-text-fill-color: white;
+}
+
+.age-of-rebellion-themed h2 + p:first-letter {
+  color: #12829b;
+}
+
+.age-of-rebellion-themed .redbox {
+  color: #efe071;
+  background-color: #721214;
+}
+
+.age-of-rebellion-themed .blackbox {
+  color: #bfbfbe;
+  background-color: rgba(46, 60, 75, 0.95);
+}
+
+.age-of-rebellion-themed .blackbox.cornered h4 {
+  color: #bfbfbe;
+}
+
+.age-of-rebellion-themed tbody tr:nth-child(odd) {
+  background-color: #eccfba;
+}
+
+.age-of-rebellion-themed td {
+  border: 1px solid #939598;
+}
+
+.age-of-rebellion-themed th {
+  background-color: #a8470e;
+  border: 1px solid #939598;
+  color: white;
+}

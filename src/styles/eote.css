@@ -1,0 +1,110 @@
+html.edge-of-the-empire-themed {
+  background-image: url("../img/right_page.png");
+}
+
+.edge-of-the-empire-themed .vehicle-stat-bar:before {
+  background-color: #a9a9a3;
+}
+
+.edge-of-the-empire-themed .stat-bar:before {
+  background-color: #b3a690;
+}
+
+.edge-of-the-empire-themed .vehicle-defense-block {
+  background-image: url("../img/detailblock-vehicle-long.png");
+}
+
+.edge-of-the-empire-themed .stat-block {
+  background-image: url("../img/eote-statblock.png");
+}
+
+.edge-of-the-empire-themed .vehicle-stat-bar .stat-block {
+  background-image: url("../img/statblock-vehicle.png");
+}
+
+.edge-of-the-empire-themed .detail-block {
+  background-image: url("../img/eote-detailblock.png");
+}
+
+.edge-of-the-empire-themed .vehicle-stat-bar .detail-block {
+  background-image: url("../img/detailblock-vehicle.png");
+}
+
+.edge-of-the-empire-themed caption {
+  color: #52644a;
+}
+
+.edge-of-the-empire-themed h5 {
+  color: #761213;
+}
+
+.edge-of-the-empire-themed h4 {
+  color: #876d22;
+}
+
+.edge-of-the-empire-themed h3 {
+  color: #761213;
+}
+
+.edge-of-the-empire-themed h2 {
+  color: #52644a;
+}
+
+.edge-of-the-empire-themed h1 {
+  color: #a15838;
+  -webkit-text-fill-color: #a15838;
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: transparent;
+}
+
+.edge-of-the-empire-themed h2 + p:first-letter {
+  color: #52644a;
+}
+
+.edge-of-the-empire-themed .redbox {
+  color: #efe071;
+  background-color: #721214;
+}
+
+.edge-of-the-empire-themed .blackbox {
+  color: #bfbfbe;
+  background-color: #465050;
+}
+
+.edge-of-the-empire-themed .blackbox caption {
+  color: white;
+}
+
+.edge-of-the-empire-themed .blackbox tbody tr:nth-child(odd) {
+  background-color: black;
+}
+
+.edge-of-the-empire-themed .blackbox th {
+  background-color: #761213;
+  border-color: #939598;
+  color: white;
+  border-top: none;
+}
+
+.edge-of-the-empire-themed .blackbox td {
+  color: white;
+  border-color: #939598;
+}
+
+.edge-of-the-empire-themed .blackbox.cornered h4 {
+  color: #b3a68e;
+}
+
+.edge-of-the-empire-themed tbody tr:nth-child(odd) {
+  background-color: #cfd0c9;
+}
+
+.edge-of-the-empire-themed td {
+  border: 1px solid #939598;
+}
+
+.edge-of-the-empire-themed th {
+  background-color: #52644a;
+  border: 1px solid #939598;
+  color: white;
+}
