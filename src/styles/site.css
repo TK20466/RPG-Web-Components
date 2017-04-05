@@ -538,6 +538,12 @@ table {
   border-collapse: collapse;
 }
 
+td[colspan="100"] {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
 tbody tr:nth-child(odd) {
   background-color: #eccfba;
 }
