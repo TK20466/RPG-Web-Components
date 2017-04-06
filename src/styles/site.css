@@ -513,6 +513,10 @@ h2 + p:first-letter {
   width: 100%;
 }
 
+.blackbox table tr {
+  background-image: url(../img/right_page.png);
+}
+
 .blackbox.cornered h4 {
   text-align: center;
   padding-top: 10px;
@@ -546,6 +550,7 @@ td[colspan="100"] {
 
 tbody tr:nth-child(odd) {
   background-color: #eccfba;
+  background-image: none;
 }
 
 td {

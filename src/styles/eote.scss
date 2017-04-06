@@ -93,6 +93,10 @@ html.edge-of-the-empire-themed {
        tbody tr:nth-child(odd) {
            background-color: $tdStripe-blackbox;
        }
+       tbody tr {
+          background-color: transparent;
+          background-image: none;
+       }
        th {
           background-color: $tableHeader-blackbox;
           border-color: $tableBorder-blackbox;

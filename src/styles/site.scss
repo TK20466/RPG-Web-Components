@@ -488,6 +488,9 @@ h2 + p:first-letter {
     background-color: rgba(46, 60, 75, .95);
     table {
       width: 100%;
+      tr {
+          background-image: url(../img/right_page.png);
+      }
    }
 }
 
@@ -524,6 +527,7 @@ td[colspan="100"] {
 
 tbody tr:nth-child(odd) {
     background-color: rgb(236, 207, 186);
+    background-image: none;
 }
 
 td {

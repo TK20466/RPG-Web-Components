@@ -79,6 +79,11 @@ html.edge-of-the-empire-themed {
   background-color: black;
 }
 
+.edge-of-the-empire-themed .blackbox tbody tr {
+  background-color: transparent;
+  background-image: none;
+}
+
 .edge-of-the-empire-themed .blackbox th {
   background-color: #761213;
   border-color: #939598;
