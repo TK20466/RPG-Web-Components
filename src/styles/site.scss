@@ -482,15 +482,33 @@ h2 + p:first-letter {
     margin-right: 0px;
 }
 
+ul {
+   padding-left: 35px;
+   list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><circle fill="rgb(118, 17, 19)" cx="5" cy="5" r="4"/></svg>');
+   li {
+      padding-left: 10px;
+   }
+}
+
 .blackbox {
-    color: rgb(191, 191, 190);
+    color: rgb(239, 236, 228);
     font-weight:500;
     background-color: rgba(46, 60, 75, .95);
+    p b {
+      color: white;
+   }
     table {
       width: 100%;
       tr {
           background-image: url(../img/right_page.png);
       }
+   }
+
+   ul {
+      list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><circle fill="rgb(255,255,255)" cx="5" cy="5" r="4"/></svg>');
+      b {
+        color: white;
+     }
    }
 }
 
