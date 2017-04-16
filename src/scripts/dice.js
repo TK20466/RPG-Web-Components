@@ -227,6 +227,17 @@ app.directive("detailBlock", function() {
         replace: true
     }
 });
+app.directive("detailBlockSplit", function() {
+    return {
+        templateUrl: "/views/detailblocksplit.html",
+        scope: {
+            meleeD: "=",
+            rangedD: "=",
+            display: "@display"
+        },
+        replace: true
+    }
+});
 
 app.directive("detailbar", function() {
     return {
@@ -468,7 +479,10 @@ app.directive("check", function() {
             chg: "@chg",
         },
         controller: ['$scope', function($scope) {
-            var dif = parseInt($scope.dif);
+            var dif = 0;
+            if ($scope.dif != null) {
+                dif = parseInt($scope.dif);
+            }
             $scope.difficulty_text = "";
             $scope.pdice = new Array(parseInt(dif));
             if ($scope.chg) {
@@ -525,7 +539,9 @@ app.directive("npc", function() {
             presence: "=?",
             wounds: "=?",
             soak: "=?",
-            strain: "=?"
+            strain: "=?",
+            meleeDefense: "=?",
+            rangedDefense: "=?",
         },
         controller: ["$scope", function($scope) {
             if ($scope.model == null) {
@@ -541,6 +557,8 @@ app.directive("npc", function() {
                     wounds: $scope.wounds || 10,
                     soak: $scope.soak,
                     strain: $scope.strain,
+                    meleeDefense: $scope.meleeDefense || 0,
+                    rangedDefense: $scope.rangedDefense || 0,
                     skills: {}
                 }
             }

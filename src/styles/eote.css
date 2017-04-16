@@ -26,6 +26,10 @@ html.edge-of-the-empire-themed {
   background-image: url("../img/eote-detailblock.png");
 }
 
+.edge-of-the-empire-themed .detail-block-split {
+  background-image: url("../img/eote-detailblock_split.png");
+}
+
 .edge-of-the-empire-themed .vehicle-stat-bar .detail-block {
   background-image: url("../img/detailblock-vehicle.png");
 }

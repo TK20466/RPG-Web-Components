@@ -1,1 +1,1 @@
-<span class="check">{{difficulty_text}} (<span ng-repeat="c in cdice track by $index"><challenge /></span><span ng-repeat="p in pdice track by $index"><difficulty /></span>) <span class="skill-name">{{skill}}</span> check</span>
+<span class="check">{{difficulty_text}} (<span ng-if="dif == 0">-</span><span ng-repeat="c in cdice track by $index"><challenge /></span><span ng-repeat="p in pdice track by $index"><difficulty /></span>) <span class="skill-name">{{skill}}</span> check</span>

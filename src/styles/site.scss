@@ -189,16 +189,19 @@ body {
 
 .detail-block {
     display: inline-block;
-    /* float:left; */
     width: calc(33.334% - 12.58%);
     max-height: 56px;
     height: 10vw;
-    margin-left: 6.2%;
-    margin-right: 6.29%;
+    margin-left: 2.12%;
+    margin-right: 2.12%;
     background-image: url("../img/detailblock.png");
     background-size:cover;
     background-repeat: no-repeat;
     position: relative;
+}
+
+.detail-block-split {
+    background-image: url("../img/detailblock_split.png");
 }
 
 .vehicle-stat-bar .detail-block {
@@ -272,6 +275,16 @@ body {
     text-transform: uppercase;
     bottom: 10%;
     font-size: 4.5vw;
+}
+
+.detail-block-value.value-left {
+   right: unset;
+   left: 25%;
+}
+
+.detail-block-value.value-right {
+   right: 25%;
+   left: unset;
 }
 
 .die-symbol:after {

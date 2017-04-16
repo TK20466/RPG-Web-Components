@@ -1,3 +1,3 @@
 <div class="detail-bar">
-    <detail-block ng-if="model.soak" value="model.soak" display="soak"></detail-block><detail-block ng-if="model.wounds" value="model.wounds" display="w. threshold"></detail-block><detail-block ng-if="model.strain" value="model.strain" display="s. threshold"></detail-block>
+    <detail-block ng-if="model.soak" value="model.soak" display="soak"></detail-block><detail-block ng-if="model.wounds" value="model.wounds" display="w. threshold"></detail-block><detail-block ng-if="model.strain" value="model.strain" display="s. threshold"></detail-block><detail-block-split ng-if="model.rangedDefense != 0 || model.meleeDefense != 0" ranged-d="model.rangedDefense" melee-d="model.meleeDefense" display="M/R Defense"></detail-block>
 </div>
