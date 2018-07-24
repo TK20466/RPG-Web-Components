@@ -36,7 +36,7 @@ To-do:
 * Finish documentation
 * Minion group size handling
 * live-tracker for wounds/strain/group size
-* Ranged/Melee defense box
+* ~~Ranged/Melee defense box~~ **Completed!**
 * Better equipment management
 * IE11 and Firefox support
 * WYSIWYG editor with preview
