@@ -660,3 +660,29 @@ for (var i = 0; i < skills.length; i++) {
     }
     addSkillDirective(skills[i].name, skills[i].attribute, name);
 }
+
+
+/*-Dice Stuff-*/
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+app.service("dieRoller", [function() {
+    return {
+        d4: function() {
+            return getRandomInt(1, 4);
+        },
+        d6: function() {
+            return getRandomInt(1, 6);
+        },
+        d20: function() {
+            return getRandomInt(1, 20);
+        },
+       d100: function() {
+           return getRandomInt(1, 100);
+       }
+       
+       //todo add FFG dice results
+    }
+}])
+
