@@ -51,6 +51,7 @@ Finally, you'll need to reference the module in your main angularJS app, for exa
         &lt;html class="edge-of-the-empire-themed"&gt;
     </code>
 </pre>
+<p>Try it out now:  <button id="aorTheme">Age of Rebellion Themed</button> <button id="eoteTheme">Edge of the Empire Themed</button></p>
 
 <h2 id="typography">Typography</h2>
 <h3>Basic typography</h3>
@@ -147,6 +148,21 @@ Make a <check skill="Opposed Charm vs Discipline" dif="2" chg="1"></check> to ta
     <skills athletics="2" ranged-light="4" />
     <abilities>Add <boost></boost> when making a Persuasion Check</abilities>
     <weapon name="frag grenades" skill="Ranged (Light)" damage="2" pierce="5" blast="9" critical="5" range="short" ammo="1" quantity="3"></weapon>
+</npc>
+
+<pre>
+<code>
+   &lt;npc name="Dark Trooper (Phase 1)" rank="rival" brawn="5" agility="5" cunning="2" soak="8" wounds="20" strain="8" ranged-defense=2 melee-defense=2&gt;<br />
+       &lt;skills melee="2" stealth="3" cool="3" resilience=3&gt;&lt;/skills&gt;<br />
+       &lt;abilities&gt;Adversary 1 (upgrade difficulty of all combat checks against this target once), Phrik Armor (soak value cannot be reduced or pierced),&lt;/abilities&gt;<br />
+       &lt;weapon name="Piercing Blade" damage="5" skill="Melee" range="Engaged" critical="3" vicious="2" pierce=2&gt;Add brawn ranks to damage in addition to uncanceled    &lt;success&gt;&lt;/success&gt;&lt;/weapon&gt;<br />
+   &lt;/npc&gt;
+</code>
+</pre>
+<npc name="Dark Trooper (Phase 1)" rank="rival" brawn="5" agility="5" cunning="2" soak="8" wounds="20" strain="8" ranged-defense=2 melee-defense=2>
+<skills melee="2" stealth="3" cool="3" resilience=3></skills>
+<abilities>Adversary 1 (upgrade difficulty of all combat checks against this target once), Phrik Armor (soak value cannot be reduced or pierced),</abilities>
+<weapon name="Piercing Blade" damage="5" skill="Melee" range="Engaged" critical="3" vicious="2" pierce=2>Add brawn ranks to damage in addition to uncanceled <success></success></weapon>
 </npc>
 
 <h3>Vehicles</h3>
@@ -282,6 +298,10 @@ Make a <check skill="Opposed Charm vs Discipline" dif="2" chg="1"></check> to ta
 
 
 </body>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-aria.min.js"></script>
@@ -292,6 +312,14 @@ Make a <check skill="Opposed Charm vs Discipline" dif="2" chg="1"></check> to ta
 <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
 <script src="scripts/swrpgaor.min.js"></script>
 <script>
-var app = angular.module("myApp", ['swaor'])
+   var app = angular.module("myApp", ['swaor']);
+   $("#aorTheme").click(function() {
+      $("html").addClass("age-of-rebellion-themed");
+      $("html").removeClass("edge-of-the-empire-themed");
+   });
+   $("#eoteTheme").click(function() {
+      $("html").removeClass("age-of-rebellion-themed");
+      $("html").addClass("edge-of-the-empire-themed");
+   });
 </script>
 </html>
