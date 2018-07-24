@@ -1,11 +1,11 @@
 # RPG-Web-Components
-An AoR-themed set of AngularJS directives and components
+A FFG themed set of AngularJS directives and components
 
 Please view the examples at: https://tk20466.github.io/RPG-Web-Components/
 
 Live example:  http://swrpg.sarah-bailey.com/
 
-**Current Version**: 0.9.5
+**Current Version**: 1.0.1
 
 **Usage**: just include the module in your application module after referencing AngularJS and the included javascript/css file.
 
