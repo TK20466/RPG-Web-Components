@@ -5,7 +5,7 @@ Please view the examples at: https://tk20466.github.io/RPG-Web-Components/
 
 Live example:  http://swrpg.sarah-bailey.com/
 
-**Current Version**: 1.0.1
+**Current Version**: 1.0.2
 
 **Usage**: just include the module in your application module after referencing AngularJS and the included javascript/css file.
 
@@ -37,6 +37,6 @@ To-do:
 * Minion group size handling
 * live-tracker for wounds/strain/group size
 * ~~Ranged/Melee defense box~~ **Completed!**
-* Better equipment management
+* ~~Better equipment management~~ **Completed!**
 * IE11 and Firefox support
 * WYSIWYG editor with preview
