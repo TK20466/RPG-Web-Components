@@ -7,7 +7,7 @@ var minifyHTML = require('gulp-htmlmin');
 var version = "1.0.1";
 
 gulp.task('templates', function () {
-  gulp.src([
+  return gulp.src([
       'src/views/*.html'
     ])
     .pipe(minifyHTML({collapseWhitespace: true}))
@@ -19,26 +19,26 @@ gulp.task('templates', function () {
 });
 
 gulp.task("fonts", function() {
-   gulp.src(['src/fonts/*'])
+   return gulp.src(['src/fonts/*'])
       .pipe(gulp.dest('releases/' + version + "/fonts"))
 })
 gulp.task("images", function() {
-   gulp.src(['src/img/*'])
+   return gulp.src(['src/img/*'])
       .pipe(gulp.dest('releases/' + version + "/img"))
 })
 
 gulp.task("styles", function() {
-   gulp.src(['src/styles/site.css', 'src/styles/*.css'])
+   return gulp.src(['src/styles/site.css', 'src/styles/*.css'])
       .pipe(concat('swrpgaor.min.css'))
       .pipe(uglifycss())
       .pipe(gulp.dest('releases/' + version + "/styles"))
 })
 
-gulp.task('release', ['fonts', 'images', 'styles','templates'], function() {
+gulp.task('release', gulp.series('fonts', 'images', 'styles','templates', function() {
     return gulp.src(['src/scripts/starship.js', 'src/scripts/dice.js', 'src/scripts/**/*.js', '!./src/pkg/*', 'tmp/*.js'])
 		  .pipe(concat('swrpgaor.min.js', {newLine: ';'}))
         .pipe(uglify())
         .pipe(gulp.dest('releases/' + version + "/scripts"));
-});
+}));
 
 console.log("completed");

@@ -1,0 +1,34 @@
+{
+  "name": "rpg-web-components",
+  "version": "1.0.2",
+  "description": "a set of themed Star Wars roleplaying angularjs components that mimick the styling of FFG sources",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs",
+    "src": "source files"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-uglify": "^2.1.0",
+    "gulp-uglifycss": "^1.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TK20466/RPG-Web-Components.git"
+  },
+  "keywords": [
+    "star",
+    "wars",
+    "FFG",
+    "RPG"
+  ],
+  "author": "Sarah 'Alay' Bailey",
+  "bugs": {
+    "url": "https://github.com/TK20466/RPG-Web-Components/issues"
+  },
+  "homepage": "https://github.com/TK20466/RPG-Web-Components#readme"
+}
