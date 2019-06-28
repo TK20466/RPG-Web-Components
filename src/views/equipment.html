@@ -1,10 +1,13 @@
 <div class="npc-equipment">
     <div class="npc-details-bold">Equipment:</div>
-    <div class="npc-details-normal" ng-if="equipment && equipment.weapons" ng-repeat="item in equipment.weapons">
-        <span class="weapon-name"><span ng-if="item.quantity">{{item.quantity}} </span>{{item.name}} </span><span class="weapon-details">(<skill hide-rank="true" name="item.skill" rank="getRank(item.skill)" abty="getAbility(item.skill)" minion="isMinion()"></skill>;
-        Damage: {{item.damage}}; Critical: {{item.critical}}; Range [<span class="weapon-range">{{item.range}}</span>]; <span ng-if="item.pierce">Piece {{item.pierce}};</span> <span ng-if="item.blast">Blast {{item.blast}};</span> <span ng-if="item.vicious">Vicious {{item.vicious}};</span> <span ng-if="item.ammo">Limited Ammo {{item.ammo}};</span> <span ng-if="item.autoFire">Auto Fire;</span> <span ng-if="item.stun">Stun setting</span> <span dynamic="item.text"></span>)</span>
-        <span ng-if="!$last">, </span>
-        <span ng-if="$last">.</span>
+    <div class="npc-details-normal" ng-if="equipment">
+        <span class="weapon" ng-if="equipment.weapons" ng-repeat="item in equipment.weapons">
+            <span class="weapon-name"><span ng-if="item.quantity">{{item.quantity}} </span>{{item.name}} </span><span class="weapon-details">(<skill hide-rank="true" name="item.skill" rank="getRank(item.skill)" abty="getAbility(item.skill)" minion="isMinion()"></skill>;
+            Damage: {{item.damage}}; Critical: {{item.critical}}; Range [<span class="weapon-range">{{item.range}}</span>]; <span ng-if="item.pierce">Piece {{item.pierce}};</span> <span ng-if="item.blast">Blast {{item.blast}};</span> <span ng-if="item.vicious">Vicious {{item.vicious}};</span> <span ng-if="item.ammo">Limited Ammo {{item.ammo}};</span> <span ng-if="item.autoFire">Auto Fire;</span> <span ng-if="item.stun">Stun setting<span ng-if="item.text">;</span></span> <span dynamic="item.text"></span>)</span><span ng-if="equipment.items || !$last">, </span><span ng-if="!equipment.items && $last">.</span>
+        </span>
+        <span class="items" ng-if="equipment.items" ng-repeat="item in equipment.items">
+            {{item}}<span ng-if="!$last">, </span><span ng-if="$last">.</span>
+        </span>
     </div>
     <div class="npc-details-normal" ng-if="!equipment">
         None.

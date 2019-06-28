@@ -3,8 +3,8 @@
     <statbar model="model"></statbar>
     <detailbar model="model"></detailbar>
     <ng-transclude></ng-transclude>
-    <skills-block></skills-block>
+    <skills-block skills="model.skills" char="model"></skills-block>
     <talent-block talents="model.talents"></talent-block>
     <abilities-block abilities="model.abilities"></abilities-block>
-    <equipment-block equipment="model.equipment"></equipment-block>
+    <equipment-block equipment="model.equipment" skills="model.skills"></equipment-block>
 </div>

@@ -12,27 +12,33 @@ app.directive("skills", function() {
     }
 });
 
-app.directive("skillsBlock", function() {
+app.directive("skillsBlock", ["getSkillStat", function(getStat) {
     return {
         templateUrl: "/views/skills.html",
         replace: true,
         restrict: "E",
+        scope: {
+            skills: "=",
+            char: "="
+        },
         link: function ($scope, $element, $attributes) {
-            $scope.skills = $scope.model.skills;
             $scope.skillKeys = function() {
                 var keys = [];
-                for (k in $scope.model.skills) {
+                for (k in $scope.skills) {
                     keys.push(k);
                 }
                 return keys.sort();
             }
-            $scope.char = $scope.model;
+            $scope.getRanks = function(key) {
+               return $scope.skills[key];
+            }
             $scope.getAttr = function(key) {
-                return $scope.char[$scope.skills[key].attribute];
+               var attribute = getStat(key);
+                return $scope.char[attribute];
             }
         }
     }
-});
+}]);
 
 
 app.directive("skill", function() {
@@ -56,12 +62,6 @@ app.directive("skill", function() {
             else {
                 $scope.adice = new Array($scope.rank - $scope.abty);
                 $scope.pdice = new Array(Math.min($scope.rank, $scope.abty));
-                /*var promote = Math.floor($scope.adice.length/2);
-                for (var i = 0; i < promote; i++) {
-                    $scope.pdice.push("");
-                    $scope.adice.pop();
-                    $scope.adice.pop();
-                }*/
             }
         }]
     }
@@ -84,60 +84,29 @@ app.directive('dynamic', ['$compile', function ($compile) {
     replace: true,
     link: function (scope, ele, attrs) {
       scope.$watch(attrs.dynamic, function(html) {
+        if (Array.isArray(html)) {
+            html = html.join(", ") + ".";
+        }
         ele.html(html);
         $compile(ele.contents())(scope);
+        console.log(html);
       });
     }
   };
 }]);
 
-app.directive("talentBlock", function() {
-    return {
-        templateUrl: "/views/talents.html",
-        scope: {
-            talents: "=?talents"
-        },
-        replace: true
-    }
-});
-
-app.directive("talents", ['$sce', function($sce) {
-    return {
-       transclude: true,
-       restrict: "E",
-       link: function(scope, element, attrs, ctrl, transclude) {
-           transclude(scope, function(clone, scope) {
-               var html = "";
-               for (var i = 0; i < clone.length; i++)
-                   html += clone[i].wholeText || clone[i].outerHTML;
-               scope.$parent.model.talents = $sce.trustAsHtml(html);
-           });
-       }
-    }
-}]);
-
-
-app.directive("abilitiesBlock", function() {
-    return {
-        templateUrl: "/views/abilities.html",
-        scope: {
-            abilities: "=?abilities"
-        },
-        replace: true
-    }
-});
-
 app.directive("equipmentBlock", ["getSkillStat", function(getStat) {
     return {
         templateUrl: "/views/equipment.html",
         scope: {
-            equipment: "=?equipment"
+            equipment: "=?equipment",
+            skills: "="
         },
         controller: ["$scope", function($scope) {
             $scope.getRank = function(skill) {
-                if ($scope.$parent.skills[skill] == undefined)
+                if ($scope.skills[skill] == undefined)
                     return 0;
-                return $scope.$parent.skills[skill].rank;
+                return $scope.skills[skill];
             }
             $scope.getAbility = function(skill) {
                 var attr = getStat(skill);
@@ -151,20 +120,42 @@ app.directive("equipmentBlock", ["getSkillStat", function(getStat) {
     }
 }]);
 
-app.directive("abilities", ['$sce', function($sce) {
-    return {
-       transclude: true,
-       restrict: "E",
-       link: function(scope, element, attrs, ctrl, transclude) {
-           transclude(scope, function(clone, scope) {
-               var html = "";
-               for (var i = 0; i < clone.length; i++)
-                   html += clone[i].wholeText || clone[i].outerHTML;
-               scope.$parent.model.abilities = $sce.trustAsHtml(html);
-           });
-       }
+
+app.directive("talentBlock", ParseBlocks("talents"));
+app.directive("talents", ['$sce', ParseTransclude("talents")]);
+app.directive("abilitiesBlock", ParseBlocks("abilities"));
+app.directive("abilities", ['$sce', ParseTransclude("abilities")]);
+
+function ParseBlocks(blockName) {
+    return function() {
+        var model = {
+            templateUrl: "/views/" + blockName +".html",
+            scope: {},
+            replace: true
+        }
+        model.scope[blockName] = "=?" + blockName;
+        return model;
     }
-}]);
+};
+function ParseTransclude(property) {
+    return function($sce) {
+        return {
+           transclude: true,
+           restrict: "E",
+           link: function(scope, element, attrs, ctrl, transclude) {
+               transclude(scope, function(clone, scope) {
+                   var html = "";
+                   for (var i = 0; i < clone.length; i++)
+                       html += clone[i].wholeText || clone[i].outerHTML;
+                   if (scope.$parent.model[property] == null) {
+                       scope.$parent.model[property] = [];
+                   }
+                   scope.$parent.model[property].push($sce.trustAsHtml(html));
+               });
+           }
+        }
+    }
+};
 
 app.directive("weapon", ['$sce', function($sce) {
     return {
@@ -213,6 +204,29 @@ app.directive("weapon", ['$sce', function($sce) {
            if (scoped.equipment.weapons == null)
                scoped.equipment.weapons = [];
            scoped.equipment.weapons.push(weapon);
+        }
+    }
+}])
+
+app.directive("item", ['$sce', function($sce) {
+    return {
+        transclude: true,
+        reaplce: true,
+        restrict: "E",
+        link: function(scope, element, attrs, ctrl, transclude) {
+           var item = {};
+           transclude(scope, function(clone, scope) {
+               var html = "";
+               for (var i = 0; i < clone.length; i++)
+                   html += clone[i].wholeText || clone[i].outerHTML;
+               item = $sce.trustAsHtml(html);
+           });
+           var scoped = scope.$parent.model;
+           if (scoped.equipment == null)
+               scoped.equipment = {};
+           if (scoped.equipment.items == null)
+               scoped.equipment.items = [];
+           scoped.equipment.items.push(item);
         }
     }
 }])
@@ -528,6 +542,7 @@ app.directive("npc", function() {
         replace: true,
         transclude: true,
         scope: {
+            fromTemplate: "@",
             model: "=?",
             name: "@",
             rank: "@",
@@ -543,8 +558,15 @@ app.directive("npc", function() {
             meleeDefense: "=?",
             rangedDefense: "=?",
         },
-        controller: ["$scope", function($scope) {
-            if ($scope.model == null) {
+        controller: ["$scope", "$http", function($scope, $http) {
+            if ($scope.fromTemplate != null) {
+               $scope.model = {};
+               $http.get("characters/" + $scope.fromTemplate + ".json")
+                   .then(function(res){
+                      $scope.model = res.data;
+                    });
+            }
+            else if ($scope.model == null) {
                 $scope.model = {
                     name: $scope.name,
                     rank: $scope.rank || "rival",
@@ -644,10 +666,7 @@ function addSkillDirective(name, attribute, directiveTitle) {
                  if ($attributes[directiveTitle]) {
                      rank = parseInt($attributes[directiveTitle]);
                  }
-                 $scope.$parent.model.skills[name] = {
-                     rank: rank,
-                     attribute: attribute
-                 }
+                 $scope.$parent.model.skills[name] = rank;
             }
         }
     });
@@ -681,8 +700,7 @@ app.service("dieRoller", [function() {
        d100: function() {
            return getRandomInt(1, 100);
        }
-       
+
        //todo add FFG dice results
     }
 }])
-

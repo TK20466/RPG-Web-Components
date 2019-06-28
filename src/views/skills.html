@@ -2,7 +2,7 @@
     <div class="npc-details-bold" ng-if="char.rank != 'minion'">Skills:</div>
     <div class="npc-details-bold" ng-if="char.rank == 'minion'">Skills (group only):</div>
     <div class="npc-details-normal" ng-repeat="key in skillKeys()">
-        <skill name="key" rank="skills[key].rank" abty="getAttr(key)" minion="char.rank == 'minion'"></skill><span ng-if="!$last">,</span><span ng-if="$last">.</span>
+        <skill name="key" rank="getRanks(key)" abty="getAttr(key)" minion="char.rank == 'minion'"></skill><span ng-if="!$last">,</span><span ng-if="$last">.</span>
     </div>
     <div class="npc-details-normal" ng-if="skillKeys().length === 0">
         None.

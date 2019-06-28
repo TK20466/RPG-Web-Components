@@ -1,0 +1,57 @@
+{
+    "name": "Imperial Stormtrooper Commander",
+    "rank": "rival",
+    "brawn": 3,
+    "agility": 3,
+    "intellect": 2,
+    "cunning": 2,
+    "willpower": 3,
+    "presence": 1,
+    "wounds": 10,
+    "soak": 5,
+    "strain": null,
+    "meleeDefense": 0,
+    "rangedDefense": 1,
+    "skills": {
+      "Athletics": 1,
+      "Discipline": 2,
+      "Melee": 1,
+      "Ranged (Heavy)": 1
+   },
+   "talents": 
+    [
+        "Kinda a Jerk (add <setback></setback> to each <b>Leadership</b> check this character makes)",
+        "Macho Man (add <boost></boost> to physical skill checks)"
+    ],   
+   "abilities": 
+    [
+        "Silhouette 2",
+        "Beast Rider (gain one <boost></boost> when riding animal mounts)"
+    ],
+   "equipment": {
+        "weapons": [
+            {
+                "name": "blaster rifle",
+                "skill": "Ranged (Heavy)",
+                "damage": 9,
+                "pierce": 1,
+                "stun": true,
+                "critical": 3,
+                "range": "medium",
+                "text": "Add <boost></boost> against Mon Calamari"
+            },
+            {
+                "name": "Frag Grenade",
+                "skill": "Ranged (Light)",
+                "damage": 2,
+                "pierce": 5,
+                "blast": 9,
+                "ammo": 1,
+                "stun": true,
+                "critical": 3,
+                "range": "short"
+            }
+        ],
+        "items": ["Fishing Pole", "Duct Tape (Adds 1 soak)"]
+   }
+}
