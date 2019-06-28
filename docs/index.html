@@ -165,6 +165,78 @@ Make a <check skill="Opposed Charm vs Discipline" dif="2" chg="1"></check> to ta
 <weapon name="Piercing Blade" damage="5" skill="Melee" range="Engaged" critical="3" vicious="2" pierce=2>Add brawn ranks to damage in addition to uncanceled <success></success></weapon>
 </npc>
 
+<p>If you have an NPC you'd like to re-use, you can place it in the <pre><code><i>/characters</i></code></pre> sub directory as a json file.  Then reference the NPC json file directly in the NPC directive.  Here's an example using a stormtrooper commander.</p>
+
+<pre>
+<code>
+    &lt;npc from-template="stormtrooper_cmdr"&gt;
+    &lt;/npc&gt;
+</code>
+</pre>
+<npc from-template="stormtrooper_cmdr">
+ </npc>
+ 
+ <p><pre><code><i>stormtrooper_cmdr.json</i></code></pre></p>
+ <pre><code>
+    {
+        "name": "Imperial Stormtrooper Commander",
+        "rank": "rival",
+        "brawn": 3,
+        "agility": 3,
+        "intellect": 2,
+        "cunning": 2,
+        "willpower": 3,
+        "presence": 1,
+        "wounds": 10,
+        "soak": 5,
+        "strain": null,
+        "meleeDefense": 0,
+        "rangedDefense": 1,
+        "skills": {
+          "Athletics": 1,
+          "Discipline": 2,
+          "Melee": 1,
+          "Ranged (Heavy)": 1
+       },
+       "talents": 
+        [
+            "Kinda a Jerk (add <setback></setback> to each <b>Leadership</b> check this character makes)",
+            "Macho Man (add <boost></boost> to physical skill checks)"
+        ],   
+       "abilities": 
+        [
+            "Silhouette 2",
+            "Beast Rider (gain one <boost></boost> when riding animal mounts)"
+        ],
+       "equipment": {
+            "weapons": [
+                {
+                    "name": "blaster rifle",
+                    "skill": "Ranged (Heavy)",
+                    "damage": 9,
+                    "pierce": 1,
+                    "stun": true,
+                    "critical": 3,
+                    "range": "medium",
+                    "text": "Add <boost></boost> against Mon Calamari"
+                },
+                {
+                    "name": "Frag Grenade",
+                    "skill": "Ranged (Light)",
+                    "damage": 2,
+                    "pierce": 5,
+                    "blast": 9,
+                    "ammo": 1,
+                    "stun": true,
+                    "critical": 3,
+                    "range": "short"
+                }
+            ],
+            "items": ["Fishing Pole", "Duct Tape (Adds 1 soak)"]
+       }
+    }
+ </code></pre>
+
 <h3>Vehicles</h3>
 <pre>
    <code>
