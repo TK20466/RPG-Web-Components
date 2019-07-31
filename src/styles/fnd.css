@@ -1,0 +1,127 @@
+html.force-and-destiny-themed {
+  background-image: url("../img/fndBackground.jpg");
+}
+
+.force-and-destiny-themed .vehicle-stat-bar:before {
+  background-color: #a9a9a3;
+}
+
+.force-and-destiny-themed .stat-bar:before {
+  background-color: #ca9254;
+}
+
+.force-and-destiny-themed .vehicle-defense-block {
+  background-image: url("../img/detailblock-vehicle-long.png");
+}
+
+.force-and-destiny-themed .stat-block {
+  background-image: url("../img/fnd-statblock.png");
+}
+
+.force-and-destiny-themed .vehicle-stat-bar .stat-block {
+  background-image: url("../img/statblock-vehicle.png");
+}
+
+.force-and-destiny-themed .detail-block {
+  background-image: url("../img/eote-detailblock.png");
+}
+
+.force-and-destiny-themed .detail-block-split {
+  background-image: url("../img/eote-detailblock_split.png");
+}
+
+.force-and-destiny-themed .vehicle-stat-bar .detail-block {
+  background-image: url("../img/detailblock-vehicle.png");
+}
+
+.force-and-destiny-themed caption {
+  color: #354456;
+}
+
+.force-and-destiny-themed h5 {
+  color: #761213;
+}
+
+.force-and-destiny-themed h4 {
+  color: #00829b;
+}
+
+.force-and-destiny-themed h3 {
+  color: #ae8e35;
+}
+
+.force-and-destiny-themed h2 {
+  color: #761213;
+}
+
+.force-and-destiny-themed h1 {
+  color: #761213;
+  -webkit-text-fill-color: #761213;
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: transparent;
+}
+
+.force-and-destiny-themed h2 + p:first-letter {
+  color: #761213;
+}
+
+.force-and-destiny-themed .redbox {
+  color: #efe071;
+  background-color: #721214;
+}
+
+.force-and-destiny-themed .blackbox {
+  color: #bfbfbe;
+  background-color: #464038;
+}
+
+.force-and-destiny-themed .blackbox caption {
+  color: white;
+}
+
+.force-and-destiny-themed .blackbox tbody tr:nth-child(odd) {
+  background-color: black;
+}
+
+.force-and-destiny-themed .blackbox tbody tr {
+  background-color: transparent;
+  background-image: none;
+}
+
+.force-and-destiny-themed .blackbox th {
+  background-color: #354456;
+  border-color: #939598;
+  color: white;
+  border-top: none;
+}
+
+.force-and-destiny-themed .blackbox td {
+  color: white;
+  border-color: #939598;
+}
+
+.force-and-destiny-themed .blackbox.cornered h4 {
+  color: #caccce;
+}
+
+.force-and-destiny-themed tbody tr:nth-child(odd) {
+  background-color: #c7dee5;
+}
+
+.force-and-destiny-themed td {
+  border: 1px solid #939598;
+}
+
+.force-and-destiny-themed th {
+  background-color: #354456;
+  border: 1px solid #939598;
+  color: white;
+}
+
+.force-and-destiny-themed ul {
+  list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><circle fill="rgb(0, 174, 240)" cx="5" cy="5" r="4"/></svg>');
+}
+
+.force-and-destiny-themed .blackbox ul {
+  list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><circle fill="rgb(255,255,255)" cx="5" cy="5" r="4"/></svg>');
+}

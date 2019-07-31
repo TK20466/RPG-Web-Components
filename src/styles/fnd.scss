@@ -1,0 +1,142 @@
+$h2color: rgb(118, 18, 19);
+$h3color: rgb(174, 142, 53);
+$h4color: rgb(0, 130, 155);
+$h4-boxcolor: rgb(202, 204, 206);
+$h5color: $h2color;
+$block-bg: rgb(202, 146, 84);
+$caption-color: rgb(53, 68, 86);
+$tableHeader: $caption-color;
+$tdStripe: rgb(199, 222, 229);
+$caption-color-blackbox: white;
+$tdStripe-blackbox: black;
+$tableHeader-blackbox: $tableHeader;
+$tableBorder-blackbox: rgb(147, 149, 152);
+$blackbox: rgb(70, 64, 56);
+
+
+html.force-and-destiny-themed {
+   background-image: url("../img/fndBackground.jpg");
+}
+
+.force-and-destiny-themed {
+
+   .vehicle-stat-bar:before {
+       background-color: rgb(169, 169, 163);
+   }
+
+   .stat-bar:before {
+       background-color: $block-bg;
+   }
+
+
+   .vehicle-defense-block {
+       background-image: url("../img/detailblock-vehicle-long.png");
+   }
+
+   .stat-block {
+       background-image: url("../img/fnd-statblock.png");
+   }
+
+   .vehicle-stat-bar .stat-block {
+       background-image: url("../img/statblock-vehicle.png");
+   }
+
+   .detail-block {
+       background-image: url("../img/eote-detailblock.png");
+   }
+
+
+   .detail-block-split {
+       background-image: url("../img/eote-detailblock_split.png");
+   }
+
+
+   .vehicle-stat-bar .detail-block {
+       background-image: url("../img/detailblock-vehicle.png");
+   }
+
+   caption {
+       color: $caption-color;
+   }
+
+   h5 {
+       color: $h5color;
+   }
+
+   h4 {
+       color: $h4color;
+   }
+
+   h3 {
+       color: $h3color;
+   }
+   h2 {
+       color: $h2color;
+   }
+   h1 {
+       color: rgb(118, 18, 19);
+       -webkit-text-fill-color: rgb(118, 18, 19);
+       -webkit-text-stroke-width: 0px;
+       -webkit-text-stroke-color: transparent;
+   }
+
+   h2 + p:first-letter {
+       color: $h2color;
+   }
+
+   .redbox {
+       color: rgb(239, 224, 113);
+       background-color: rgb(114, 18, 20);
+   }
+
+   .blackbox {
+       color: rgb(191, 191, 190);
+       background-color: $blackbox;
+       caption {
+          color: $caption-color-blackbox;
+       }
+       tbody tr:nth-child(odd) {
+           background-color: $tdStripe-blackbox;
+       }
+       tbody tr {
+          background-color: transparent;
+          background-image: none;
+       }
+       th {
+          background-color: $tableHeader-blackbox;
+          border-color: $tableBorder-blackbox;
+          color: white;
+          border-top: none;
+       }
+       td {
+          color: white;
+          border-color: $tableBorder-blackbox;
+       }
+
+   }
+
+   .blackbox.cornered h4 {
+       color: $h4-boxcolor;
+   }
+
+   tbody tr:nth-child(odd) {
+       background-color: $tdStripe;
+   }
+
+   td {
+       border: 1px solid rgb(147, 149, 152);
+   }
+
+   th {
+       background-color: $tableHeader;
+       border: 1px solid rgb(147, 149, 152);
+       color: white;
+   }
+
+   ul {
+     list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><circle fill="rgb(0, 174, 240)" cx="5" cy="5" r="4"/></svg>');
+   }
+   .blackbox ul {
+     list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><circle fill="rgb(255,255,255)" cx="5" cy="5" r="4"/></svg>');
+   }
+}
