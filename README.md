@@ -1,11 +1,11 @@
 # RPG-Web-Components
 A FFG themed set of AngularJS directives and components
 
-Please view the examples at: https://tk20466.github.io/RPG-Web-Components/
+Please view the examples and documentation at: https://tk20466.github.io/RPG-Web-Components/
 
 Live example:  http://swrpg.sarah-bailey.com/
 
-**Current Version**: 1.0.2
+**Current Version**: 1.1.0
 
 **Usage**: just include the module in your application module after referencing AngularJS and the included javascript/css file.
 
@@ -15,6 +15,7 @@ Live example:  http://swrpg.sarah-bailey.com/
 
     <html class="edge-of-the-empire-themed">
     <html class="age-of-rebellion-themed">
+    <html class="force-and-destiny-themed">
 
 **Building**: Make sure you have the following NPM packages installed:
  * [gulp](https://www.npmjs.com/package/gulp)
@@ -33,8 +34,8 @@ your files will be output to a /releases folder
 
 To-do:
 
-* Finish documentation
-* Minion group size handling
+* ~~Finish documentation~~ **Completed!**
+* ~~Minion group size handling~~ **Completed!**
 * live-tracker for wounds/strain/group size
 * ~~Ranged/Melee defense box~~ **Completed!**
 * ~~Better equipment management~~ **Completed!**
