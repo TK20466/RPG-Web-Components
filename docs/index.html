@@ -49,9 +49,10 @@ Finally, you'll need to reference the module in your main angularJS app, for exa
     <code>
         &lt;html class="age-of-rebellion-themed"&gt;
         &lt;html class="edge-of-the-empire-themed"&gt;
+        &lt;html class="force-and-destiny-themed"&gt;
     </code>
 </pre>
-<p>Try it out now:  <button id="aorTheme">Age of Rebellion Themed</button> <button id="eoteTheme">Edge of the Empire Themed</button></p>
+<p>Try it out now:  <button id="aorTheme">Age of Rebellion Themed</button> <button id="eoteTheme">Edge of the Empire Themed</button></p> <button id="fndTheme">Force and Destiny Themed</button></p>
 
 <h2 id="typography">Typography</h2>
 <h3>Basic typography</h3>
@@ -175,7 +176,7 @@ Make a <check skill="Opposed Charm vs Discipline" dif="2" chg="1"></check> to ta
 </pre>
 <npc from-template="stormtrooper_cmdr">
  </npc>
- 
+
  <p>Here's the text format for <pre><code><i>characters/stormtrooper_cmdr.json</i></code></pre></p>
  <pre><code>
     {
@@ -198,12 +199,12 @@ Make a <check skill="Opposed Charm vs Discipline" dif="2" chg="1"></check> to ta
           "Melee": 1,
           "Ranged (Heavy)": 1
        },
-       "talents": 
+       "talents":
         [
             "Kinda a Jerk (add &lt;setback&gt;&lt;/setback&gt; to each &lt;b&gt;Leadership&lt;/b&gt; check this character makes)",
             "Macho Man (add &lt;boost&gt;&lt;/boost&gt; to physical skill checks)"
-        ],   
-       "abilities": 
+        ],
+       "abilities":
         [
             "Silhouette 2",
             "Beast Rider (gain one &lt;boost&gt;&lt;/boost&gt; when riding animal mounts)"
@@ -388,10 +389,17 @@ Make a <check skill="Opposed Charm vs Discipline" dif="2" chg="1"></check> to ta
    $("#aorTheme").click(function() {
       $("html").addClass("age-of-rebellion-themed");
       $("html").removeClass("edge-of-the-empire-themed");
+      $("html").removeClass("force-and-destiny-themed");
    });
    $("#eoteTheme").click(function() {
       $("html").removeClass("age-of-rebellion-themed");
+      $("html").removeClass("force-and-destiny-themed");
       $("html").addClass("edge-of-the-empire-themed");
+   });
+   $("#fndTheme").click(function() {
+      $("html").removeClass("age-of-rebellion-themed");
+      $("html").removeClass("edge-of-the-empire-themed");
+      $("html").addClass("force-and-destiny-themed");
    });
 </script>
 </html>
