@@ -1,4 +1,4 @@
-var app = angular.module("swaor", ["starship"]);
+var app = angular.module("swaor", ["starship", "character-sheet"]);
 
 app.directive("skills", function() {
     return {

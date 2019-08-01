@@ -1,0 +1,13 @@
+<div class="character-info">
+   <div class="character-info-left">
+      <div class="info-header info-header-subtext">Character</div>
+      <div class="info-header info-header-bolden">Character Name <span>{{name}}</span></div>
+      <div class="info-header">Species <span>{{species}}</span></div>
+      <div class="info-header">Career <span>{{career}}</span></div>
+      <div class="info-header">Specialization Trees <span>{{specializations.join(", ")}}</span></div>
+   </div>
+   <div class="character-info-right">
+      <statblock display="Force Rating" value="forceRating"></statblock>
+      <div class="info-header" ng-if="player">Player <span>{{player}}</span></div>
+   </div>
+</div>
