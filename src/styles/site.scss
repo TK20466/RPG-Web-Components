@@ -302,6 +302,10 @@ body {
    left: unset;
 }
 
+.die-symbol {
+   text-transform: none;
+}
+
 .die-symbol:after {
     font-family: EotESymbol;
     font-style: normal;
