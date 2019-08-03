@@ -638,12 +638,12 @@ var skillsTree = function() { return [{name: "Astrogation",           attribute:
 {name: "Melee",                   attribute: "brawn",              },
 {name: "Ranged (Light)",          attribute: "agility",              alias: "rangedLight"},
 {name: "Ranged (Heavy)",          attribute: "agility",              alias: "rangedHeavy"},
-{name: "Core Worlds",             attribute: "intellect",             alias:"coreWorlds"},
-{name: "Education",               attribute: "intellect",             },
-{name: "Lore",                    attribute: "intellect",             },
-{name: "Outer Rim",               attribute: "intellect",             alias: "outerRim"},
-{name: "Underworld",              attribute: "intellect",             },
-{name: "Xenology",                attribute: "intellect",             }]; };
+{name: "Knowledge (Core Worlds)",             attribute: "intellect",             alias:"coreWorlds"},
+{name: "Knowledge (Education)",               attribute: "intellect",             alias:"education"},
+{name: "Knowledge (Lore)",                    attribute: "intellect",             alias:"lore"},
+{name: "Knowledge (Outer Rim)",               attribute: "intellect",             alias: "outerRim"},
+{name: "Knowledge (Underworld)",              attribute: "intellect",             alias:"underworld"},
+{name: "Knowledge (Xenology)",                attribute: "intellect",             alias:"xenology"}]; };
 
 app.factory("skillInfo", [function() {
     return skillsTree();
