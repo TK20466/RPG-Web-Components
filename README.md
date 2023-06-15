@@ -3,7 +3,7 @@ A FFG themed set of AngularJS directives and components
 
 Please view the examples and documentation at: https://tk20466.github.io/RPG-Web-Components/
 
-Live example:  http://swrpg.sarah-bailey.com/
+Live example:  swrpg.ezrabailey.net
 
 **Current Version**: 1.1.0
 
